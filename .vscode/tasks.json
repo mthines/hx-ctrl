@@ -1,0 +1,29 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558
+  // for the documentation about the tasks.json format
+  // Replace [project_name] with your NX project name.
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "release",
+      "command": "yarn release",
+      "type": "shell",
+      "group": "test",
+      "problemMatcher": []
+    },
+    {
+      "type": "npm",
+      "script": "dev",
+      "problemMatcher": [],
+      "label": "npm: dev",
+      "detail": "ts-node-dev --respawn src/**/*"
+    },
+    {
+      "type": "npm",
+      "script": "dev:loader",
+      "problemMatcher": ["$eslint-stylish"],
+      "label": "npm: dev:loader",
+      "detail": "ts-node-dev --respawn -r tsconfig-paths/register src/scripts/loader.ts"
+    }
+  ]
+}

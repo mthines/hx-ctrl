@@ -1,0 +1,5 @@
+{
+  "macros": {
+		"fullFormat": ["eslint.executeAutofix", "editor.action.formatDocument"]
+	},
+}

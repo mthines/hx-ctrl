@@ -1,0 +1,202 @@
+desc:HX Ctrl - Full (Guitar CC + Snapshot)
+
+slider1:0<0,15,1{1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16}>MIDI Channel
+slider4:0<0,7,1>Snapshot
+slider5:102<0,127,1>(CC 10) G. Volume
+slider6:63<0,127,1>(CC 11) G. Pan
+slider7:0<0,127,1>(CC 12) G. Knob 1
+slider8:0<0,127,1>(CC 13) G. Knob 2
+slider9:0<0,127,1>(CC 14) G. Knob 3
+slider10:0<0,127,1>(CC 15) G. Knob 4
+slider11:0<0,127,1>(CC 16) G. Knob 5
+slider12:0<0,127,1>(CC 17) G. Knob 6
+slider13:0<0,127,1>(CC 18) G. Knob 7
+slider14:0<0,127,1>(CC 19) G. Knob 8
+slider15:0<0,1,1>(CC 20) G. Switch 1
+slider16:0<0,1,1>(CC 21) G. Switch 2
+slider17:0<0,1,1>(CC 22) G. Switch 3
+slider18:0<0,1,1>(CC 23) G. Switch 4
+slider19:0<0,1,1>(CC 24) G. Switch 5
+
+@init
+cc_msg = 176; // 0xB0 or CC messages
+c4 = ceil(slider4);
+c5 = ceil(slider5);
+c6 = ceil(slider6);
+c7 = ceil(slider7);
+c8 = ceil(slider8);
+c9 = ceil(slider9);
+c10 = ceil(slider10);
+c11 = ceil(slider11);
+c12 = ceil(slider12);
+c13 = ceil(slider13);
+c14 = ceil(slider14);
+c15 = ceil(slider15);
+c16 = ceil(slider16);
+c17 = ceil(slider17);
+c18 = ceil(slider18);
+c19 = ceil(slider19);
+
+c4_run = 0;
+c5_run = 0;
+c6_run = 0;
+c7_run = 0;
+c8_run = 0;
+c9_run = 0;
+c10_run = 0;
+c11_run = 0;
+c12_run = 0;
+c13_run = 0;
+c14_run = 0;
+c15_run = 0;
+c16_run = 0;
+c17_run = 0;
+c18_run = 0;
+c19_run = 0;
+
+@slider
+c4 != slider4 ? (
+  c4 = slider4;
+  c4_run = 1;
+);
+c5 != slider5 ? (
+  c5 = slider5;
+  c5_run = 1;
+);
+c6 != slider6 ? (
+  c6 = slider6;
+  c6_run = 1;
+);
+c7 != slider7 ? (
+  c7 = slider7;
+  c7_run = 1;
+);
+c8 != slider8 ? (
+  c8 = slider8;
+  c8_run = 1;
+);
+c9 != slider9 ? (
+  c9 = slider9;
+  c9_run = 1;
+);
+c10 != slider10 ? (
+  c10 = slider10;
+  c10_run = 1;
+);
+c11 != slider11 ? (
+  c11 = slider11;
+  c11_run = 1;
+);
+c12 != slider12 ? (
+  c12 = slider12;
+  c12_run = 1;
+);
+c13 != slider13 ? (
+  c13 = slider13;
+  c13_run = 1;
+);
+c14 != slider14 ? (
+  c14 = slider14;
+  c14_run = 1;
+);
+c15 != slider15 ? (
+  c15 = slider15;
+  c15_run = 1;
+);
+c16 != slider16 ? (
+  c16 = slider16;
+  c16_run = 1;
+);
+c17 != slider17 ? (
+  c17 = slider17;
+  c17_run = 1;
+);
+c18 != slider18 ? (
+  c18 = slider18;
+  c18_run = 1;
+);
+c19 != slider19 ? (
+  c19 = slider19;
+  c19_run = 1;
+);
+
+@block
+c4_run ? (
+  midisend(offset, (cc_msg + slider1), (69) | (c4 * 256));
+  c4_run = 0;
+);
+
+c5_run ? (
+  midisend(offset, (cc_msg + slider1), (10) | (c5 * 256));
+  c5_run = 0;
+);
+
+c6_run ? (
+  midisend(offset, (cc_msg + slider1), (11) | (c6 * 256));
+  c6_run = 0;
+);
+
+c7_run ? (
+  midisend(offset, (cc_msg + slider1), (12) | (c7 * 256));
+  c7_run = 0;
+);
+
+c8_run ? (
+  midisend(offset, (cc_msg + slider1), (13) | (c8 * 256));
+  c8_run = 0;
+);
+
+c9_run ? (
+  midisend(offset, (cc_msg + slider1), (14) | (c9 * 256));
+  c9_run = 0;
+);
+
+c10_run ? (
+  midisend(offset, (cc_msg + slider1), (15) | (c10 * 256));
+  c10_run = 0;
+);
+
+c11_run ? (
+  midisend(offset, (cc_msg + slider1), (16) | (c11 * 256));
+  c11_run = 0;
+);
+
+c12_run ? (
+  midisend(offset, (cc_msg + slider1), (17) | (c12 * 256));
+  c12_run = 0;
+);
+
+c13_run ? (
+  midisend(offset, (cc_msg + slider1), (18) | (c13 * 256));
+  c13_run = 0;
+);
+
+c14_run ? (
+  midisend(offset, (cc_msg + slider1), (19) | (c14 * 256));
+  c14_run = 0;
+);
+
+c15_run ? (
+  midisend(offset, (cc_msg + slider1), (20) | (c15 === 0 ? 0 : 127 * 256));
+  c15_run = 0;
+);
+
+c16_run ? (
+  midisend(offset, (cc_msg + slider1), (21) | (c16 === 0 ? 0 : 127 * 256));
+  c16_run = 0;
+);
+
+c17_run ? (
+  midisend(offset, (cc_msg + slider1), (22) | (c17 === 0 ? 0 : 127 * 256));
+  c17_run = 0;
+);
+
+c18_run ? (
+  midisend(offset, (cc_msg + slider1), (23) | (c18 === 0 ? 0 : 127 * 256));
+  c18_run = 0;
+);
+
+c19_run ? (
+  midisend(offset, (cc_msg + slider1), (24) | (c19 === 0 ? 0 : 127 * 256));
+  c19_run = 0;
+);

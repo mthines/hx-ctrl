@@ -1,60 +1,35 @@
 {
-  "env": {
-    "browser": true,
-    "es2021": true
-  },
-  "extends": ["airbnb-base"],
-  "parser": "@typescript-eslint/parser",
-  "parserOptions": {
-    "ecmaVersion": "latest",
-    "sourceType": "module"
-  },
-  "plugins": ["@typescript-eslint", "simple-import-sort", "unused-imports"],
-  "rules": {
-    "no-tabs": "off",
-    "indent": ["warn"],
-    "import/order": "off",
-    "consistent-return": "off",
-    "no-use-before-define": "off",
-    "import/extensions": "off",
-    "import/prefer-default-export": "off",
-    "import/no-unresolved": "off",
-    "no-extra-boolean-cast": "off",
-    "object-curly-newline": "off",
-    "max-len": "off",
-    "no-unused-vars": ["error", { "argsIgnorePattern": "^_", "destructuredArrayIgnorePattern": "^_" }],
-    "no-console": ["warn", { "allow": ["warn", "error"] }],
-    "simple-import-sort/imports": [
-      "warn",
-      {
-        "groups": [
-          ["^((?!((.*).(scss|css))))"],
-          ["^(@project_name/)"],
-          ["^(@apps/.+/components|components/)"],
-          ["^(@apps/.+/constants|constants/)"],
-          ["^(@apps/.+/config|config/)"],
-          ["^(@apps/.+/lib|lib/)"],
-          ["^(@apps/.+/pages|pages/)"],
-          ["^(@apps/.+/state|state/)"],
-          ["^(@apps/.+/styles|styles/)"],
-          ["^(@apps/.+/translations|translations/)"],
-          ["^(@apps/.+/types|types/)"],
-          ["^(@apps/.+/utils|utils/)"],
-          ["^(@apps/.+/assets|assets/|(.*).(scss|css)$)"],
-          ["^((./|../))"]
+  "root": true,
+  "ignorePatterns": ["**/*"],
+  "plugins": ["@nrwl/nx"],
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+      "rules": {
+        "@nrwl/nx/enforce-module-boundaries": [
+          "error",
+          {
+            "enforceBuildableLibDependency": true,
+            "allow": [],
+            "depConstraints": [
+              {
+                "sourceTag": "*",
+                "onlyDependOnLibsWithTags": ["*"]
+              }
+            ]
+          }
         ]
       }
-    ],
-    "import/no-extraneous-dependencies": ["off"],
-    "unused-imports/no-unused-imports": ["error"],
-    "unused-imports/no-unused-vars": [
-      "warn",
-      {
-        "args": "after-used",
-        "argsIgnorePattern": "^_",
-        "vars": "all",
-        "varsIgnorePattern": "^_"
-      }
-    ]
-  }
+    },
+    {
+      "files": ["*.ts", "*.tsx"],
+      "extends": ["plugin:@nrwl/nx/typescript"],
+      "rules": {}
+    },
+    {
+      "files": ["*.js", "*.jsx"],
+      "extends": ["plugin:@nrwl/nx/javascript"],
+      "rules": {}
+    }
+  ]
 }

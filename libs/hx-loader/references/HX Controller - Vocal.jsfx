@@ -1,0 +1,460 @@
+desc:HX Ctrl - Full (Vocal CC + Snapshot)
+
+slider1:0<0,15,1{1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16}>MIDI Channel
+slider4:0<0,7,1>Snapshot
+
+slider20:85<0,127,1>V. Volume (CC 25)
+slider21:63<0,127,1>V. Pan (CC 26)
+slider22:0<0,127,1>V. Knob 1 (CC 27)
+slider23:0<0,127,1>V. Knob 2 (CC 28)
+slider24:0<0,127,1>V. Knob 3 (CC 29)
+slider25:0<0,127,1>V. Knob 4 (CC 30)
+slider26:0<0,127,1>V. Knob 5 (CC 31)
+slider27:0<0,127,1>V. Knob 6 (CC 32)
+slider28:0<0,127,1>V. Knob 7 (CC 33)
+slider29:0<0,127,1>V. Knob 8 (CC 34)
+slider30:0<0,1,1>V. Switch 1 (CC 35)
+slider31:0<0,1,1>V. Switch 2 (CC 36)
+slider32:0<0,1,1>V. Switch 3 (CC 37)
+slider33:0<0,1,1>V. Switch 4 (CC 38)
+slider34:0<0,1,1>V. Switch 5 (CC 39)
+
+slider35:0<0,127,1>EXP 1 Pedal (CC 1)
+slider36:0<0,127,1>EXP 2 Pedal (CC 2)
+slider37:0<0,127,1>EXP 3 Pedal (CC 3)
+slider38:0<0,1,1>FS1 Switch (CC 49)
+slider39:0<0,1,1>FS2 Switch (CC 50)
+slider40:0<0,1,1>FS3 Switch (CC 51)
+slider41:0<0,1,1>FS4 Switch (CC 52)
+slider42:0<0,1,1>FS5 Switch (CC 53)
+slider43:0<0,1,1>FS7 Switch (CC 54)
+slider44:0<0,1,1>FS8 Switch (CC 55)
+slider45:0<0,1,1>FS9 Switch (CC 56)
+slider46:0<0,1,1>FS10 Switch (CC 57)
+slider47:0<0,1,1>FS11 Switch (CC 58)
+slider48:0<0,1,1>EXP Toe Switch (CC 59)
+slider49:0<0,1,1>Tuner (CC 68)
+
+@init
+cc_msg = 176; // 0xB0 or CC messages
+c4 = ceil(slider4);
+c20 = ceil(slider20);
+c21 = ceil(slider21);
+c22 = ceil(slider22);
+c23 = ceil(slider23);
+c24 = ceil(slider24);
+c25 = ceil(slider25);
+c26 = ceil(slider26);
+c27 = ceil(slider27);
+c28 = ceil(slider28);
+c29 = ceil(slider29);
+c30 = ceil(slider30);
+c31 = ceil(slider31);
+c32 = ceil(slider32);
+c33 = ceil(slider33);
+c34 = ceil(slider34);
+c35 = ceil(slider35);
+c36 = ceil(slider36);
+c37 = ceil(slider37);
+c38 = ceil(slider38);
+c39 = ceil(slider39);
+c40 = ceil(slider40);
+c41 = ceil(slider41);
+c42 = ceil(slider42);
+c43 = ceil(slider43);
+c44 = ceil(slider44);
+c45 = ceil(slider45);
+c46 = ceil(slider46);
+c47 = ceil(slider47);
+c48 = ceil(slider48);
+c49 = ceil(slider49);
+
+c4_run = 0;
+c20_run = 0;
+c21_run = 0;
+c22_run = 0;
+c23_run = 0;
+c24_run = 0;
+c25_run = 0;
+c26_run = 0;
+c27_run = 0;
+c28_run = 0;
+c29_run = 0;
+c30_run = 0;
+c31_run = 0;
+c32_run = 0;
+c33_run = 0;
+c34_run = 0;
+c35_run = 0;
+c36_run = 0;
+c37_run = 0;
+c38_run = 0;
+c39_run = 0;
+c40_run = 0;
+c41_run = 0;
+c42_run = 0;
+c43_run = 0;
+c44_run = 0;
+c45_run = 0;
+c46_run = 0;
+c47_run = 0;
+c48_run = 0;
+c49_run = 0;
+
+@slider
+c4 != slider4 ? (
+  c4 = slider4;
+  c4_run = 1;
+);
+c20 != slider20 ? (
+  c20 = slider20;
+  c20_run = 1;
+);
+c21 != slider21 ? (
+  c21 = slider21;
+  c21_run = 1;
+);
+c22 != slider22 ? (
+  c22 = slider22;
+  c22_run = 1;
+);
+c23 != slider23 ? (
+  c23 = slider23;
+  c23_run = 1;
+);
+c24 != slider24 ? (
+  c24 = slider24;
+  c24_run = 1;
+);
+c25 != slider25 ? (
+  c25 = slider25;
+  c25_run = 1;
+);
+c26 != slider26 ? (
+  c26 = slider26;
+  c26_run = 1;
+);
+c27 != slider27 ? (
+  c27 = slider27;
+  c27_run = 1;
+);
+c28 != slider28 ? (
+  c28 = slider28;
+  c28_run = 1;
+);
+c29 != slider29 ? (
+  c29 = slider29;
+  c29_run = 1;
+);
+c30 != slider30 ? (
+  c30 = slider30;
+  c30_run = 1;
+);
+c31 != slider31 ? (
+  c31 = slider31;
+  c31_run = 1;
+);
+c32 != slider32 ? (
+  c32 = slider32;
+  c32_run = 1;
+);
+c33 != slider33 ? (
+  c33 = slider33;
+  c33_run = 1;
+);
+c34 != slider34 ? (
+  c34 = slider34;
+  c34_run = 1;
+);
+c35 != slider35 ? (
+  c35 = slider35;
+  c35_run = 1;
+);
+c36 != slider36 ? (
+  c36 = slider36;
+  c36_run = 1;
+);
+c37 != slider37 ? (
+  c37 = slider37;
+  c37_run = 1;
+);
+c38 != slider38 ? (
+  c38 = slider38;
+  c38_run = 1;
+);
+c39 != slider39 ? (
+  c39 = slider39;
+  c39_run = 1;
+);
+c40 != slider40 ? (
+  c40 = slider40;
+  c40_run = 1;
+);
+c41 != slider41 ? (
+  c41 = slider41;
+  c41_run = 1;
+);
+c42 != slider42 ? (
+  c42 = slider42;
+  c42_run = 1;
+);
+c43 != slider43 ? (
+  c43 = slider43;
+  c43_run = 1;
+);
+c44 != slider44 ? (
+  c44 = slider44;
+  c44_run = 1;
+);
+c45 != slider45 ? (
+  c45 = slider45;
+  c45_run = 1;
+);
+c46 != slider46 ? (
+  c46 = slider46;
+  c46_run = 1;
+);
+c47 != slider47 ? (
+  c47 = slider47;
+  c47_run = 1;
+);
+c48 != slider48 ? (
+  c48 = slider48;
+  c48_run = 1;
+);
+c49 != slider49 ? (
+  c49 = slider49;
+  c49_run = 1;
+);
+
+@block
+c4_run ? (
+  midisend(offset, (cc_msg + slider1), (69) | (c4 * 256));
+  c4_run = 0;
+);
+
+c5_run ? (
+  midisend(offset, (cc_msg + slider1), (10) | (c5 * 256));
+  c5_run = 0;
+);
+
+c6_run ? (
+  midisend(offset, (cc_msg + slider1), (11) | (c6 * 256));
+  c6_run = 0;
+);
+
+c7_run ? (
+  midisend(offset, (cc_msg + slider1), (12) | (c7 * 256));
+  c7_run = 0;
+);
+
+c8_run ? (
+  midisend(offset, (cc_msg + slider1), (13) | (c8 * 256));
+  c8_run = 0;
+);
+
+c9_run ? (
+  midisend(offset, (cc_msg + slider1), (14) | (c9 * 256));
+  c9_run = 0;
+);
+
+c10_run ? (
+  midisend(offset, (cc_msg + slider1), (15) | (c10 * 256));
+  c10_run = 0;
+);
+
+c11_run ? (
+  midisend(offset, (cc_msg + slider1), (16) | (c11 * 256));
+  c11_run = 0;
+);
+
+c12_run ? (
+  midisend(offset, (cc_msg + slider1), (17) | (c12 * 256));
+  c12_run = 0;
+);
+
+c13_run ? (
+  midisend(offset, (cc_msg + slider1), (18) | (c13 * 256));
+  c13_run = 0;
+);
+
+c14_run ? (
+  midisend(offset, (cc_msg + slider1), (19) | (c14 * 256));
+  c14_run = 0;
+);
+
+c15_run ? (
+  midisend(offset, (cc_msg + slider1), (20) | (c15 === 0 ? 0 : 127 * 256));
+  c15_run = 0;
+);
+
+c16_run ? (
+  midisend(offset, (cc_msg + slider1), (21) | (c16 === 0 ? 0 : 127 * 256));
+  c16_run = 0;
+);
+
+c17_run ? (
+  midisend(offset, (cc_msg + slider1), (22) | (c17 === 0 ? 0 : 127 * 256));
+  c17_run = 0;
+);
+
+c18_run ? (
+  midisend(offset, (cc_msg + slider1), (23) | (c18 === 0 ? 0 : 127 * 256));
+  c18_run = 0;
+);
+
+c19_run ? (
+  midisend(offset, (cc_msg + slider1), (24) | (c19 === 0 ? 0 : 127 * 256));
+  c19_run = 0;
+);
+
+
+c35_run ? (
+  midisend(offset, (cc_msg + slider1), (1) | (c35 * 256));
+  c35_run = 0;
+);
+
+c36_run ? (
+  midisend(offset, (cc_msg + slider1), (2) | (c36 * 256));
+  c36_run = 0;
+);
+
+c37_run ? (
+  midisend(offset, (cc_msg + slider1), (3) | (c37 * 256));
+  c37_run = 0;
+);
+
+c38_run ? (
+  midisend(offset, (cc_msg + slider1), (49) | (c38 === 0 ? 0 : 127 * 256));
+  c38_run = 0;
+);
+
+c39_run ? (
+  midisend(offset, (cc_msg + slider1), (50) | (c39 === 0 ? 0 : 127 * 256));
+  c39_run = 0;
+);
+
+c40_run ? (
+  midisend(offset, (cc_msg + slider1), (51) | (c40 === 0 ? 0 : 127 * 256));
+  c40_run = 0;
+);
+
+c41_run ? (
+  midisend(offset, (cc_msg + slider1), (52) | (c41 === 0 ? 0 : 127 * 256));
+  c41_run = 0;
+);
+
+c42_run ? (
+  midisend(offset, (cc_msg + slider1), (53) | (c42 === 0 ? 0 : 127 * 256));
+  c42_run = 0;
+);
+
+c43_run ? (
+  midisend(offset, (cc_msg + slider1), (54) | (c43 === 0 ? 0 : 127 * 256));
+  c43_run = 0;
+);
+
+c44_run ? (
+  midisend(offset, (cc_msg + slider1), (55) | (c44 === 0 ? 0 : 127 * 256));
+  c44_run = 0;
+);
+
+c45_run ? (
+  midisend(offset, (cc_msg + slider1), (56) | (c45 === 0 ? 0 : 127 * 256));
+  c45_run = 0;
+);
+
+c46_run ? (
+  midisend(offset, (cc_msg + slider1), (57) | (c46 === 0 ? 0 : 127 * 256));
+  c46_run = 0;
+);
+
+c47_run ? (
+  midisend(offset, (cc_msg + slider1), (58) | (c47 === 0 ? 0 : 127 * 256));
+  c47_run = 0;
+);
+
+c48_run ? (
+  midisend(offset, (cc_msg + slider1), (59) | (c48 === 0 ? 0 : 127 * 256));
+  c48_run = 0;
+);
+
+c49_run ? (
+  midisend(offset, (cc_msg + slider1), (68) | (c49 === 0 ? 0 : 127 * 256));
+  c49_run = 0;
+);
+
+c20_run ? (
+  midisend(offset, (cc_msg + slider1), (25) | (c20 * 256));
+  c20_run = 0;
+);
+
+c21_run ? (
+  midisend(offset, (cc_msg + slider1), (26) | (c21 * 256));
+  c21_run = 0;
+);
+
+c22_run ? (
+  midisend(offset, (cc_msg + slider1), (27) | (c22 * 256));
+  c22_run = 0;
+);
+
+c23_run ? (
+  midisend(offset, (cc_msg + slider1), (28) | (c23 * 256));
+  c23_run = 0;
+);
+
+c24_run ? (
+  midisend(offset, (cc_msg + slider1), (29) | (c24 * 256));
+  c24_run = 0;
+);
+
+c25_run ? (
+  midisend(offset, (cc_msg + slider1), (30) | (c25 * 256));
+  c25_run = 0;
+);
+
+c26_run ? (
+  midisend(offset, (cc_msg + slider1), (31) | (c26 * 256));
+  c26_run = 0;
+);
+
+c27_run ? (
+  midisend(offset, (cc_msg + slider1), (32) | (c27 * 256));
+  c27_run = 0;
+);
+
+c28_run ? (
+  midisend(offset, (cc_msg + slider1), (33) | (c28 * 256));
+  c28_run = 0;
+);
+
+c29_run ? (
+  midisend(offset, (cc_msg + slider1), (34) | (c29 * 256));
+  c29_run = 0;
+);
+
+c30_run ? (
+  midisend(offset, (cc_msg + slider1), (35) | (c30 === 0 ? 0 : 127 * 256));
+  c30_run = 0;
+);
+
+c31_run ? (
+  midisend(offset, (cc_msg + slider1), (36) | (c31 === 0 ? 0 : 127 * 256));
+  c31_run = 0;
+);
+
+c32_run ? (
+  midisend(offset, (cc_msg + slider1), (37) | (c32 === 0 ? 0 : 127 * 256));
+  c32_run = 0;
+);
+
+c33_run ? (
+  midisend(offset, (cc_msg + slider1), (38) | (c33 === 0 ? 0 : 127 * 256));
+  c33_run = 0;
+);
+
+c34_run ? (
+  midisend(offset, (cc_msg + slider1), (39) | (c34 === 0 ? 0 : 127 * 256));
+  c34_run = 0;
+);

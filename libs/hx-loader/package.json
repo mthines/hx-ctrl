@@ -1,0 +1,41 @@
+{
+  "name": "hx-loader",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "type": "module",
+  "scripts": {
+    "build": "ts-node-dev -r tsconfig-paths/register src/lib/loader.ts --path=./references/02_03_22-CC.hlx --output=../../../../../../Library/Application\\ Support/REAPER/Effects/midi",
+    "dev": "ts-node-dev --respawn -r tsconfig-paths/register src/lib/loader.ts --path=./references/02_03_22-CC.hlx --output=../../../../../Library/Application\\ Support/REAPER/Effects/midi"
+  },
+  "devDependencies": {
+    "@types/axios": "^0.14.0",
+    "@types/express": "^4.17.8",
+    "@types/node": "^17.0.23",
+    "@typescript-eslint/eslint-plugin": "^5.17.0",
+    "@typescript-eslint/parser": "^5.17.0",
+    "axios": "^0.26.1",
+    "chalk": "^4",
+    "dayjs": "^1.11.0",
+    "eslint": "^8.12.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "eslint-plugin-unused-imports": "^2.0.0",
+    "node-fetch": "^3.2.3",
+    "prettier": "^2.6.1",
+    "rimraf": "^3.0.2",
+    "standard-version": "^9.3.2",
+    "ts-node": "^10.7.0",
+    "ts-node-dev": "^1.1.8",
+    "tslib": "^2.3.1",
+    "type-zoo": "^3.4.1",
+    "typehole": "^1.7.0",
+    "typescript": "^4.6.3"
+  },
+  "dependencies": {
+    "@types/lodash": "^4.14.181",
+    "lodash": "^4.17.21",
+    "tsconfig-paths": "^3.14.1"
+  }
+}

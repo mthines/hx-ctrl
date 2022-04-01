@@ -1,12 +1,4 @@
-import {
-  Config,
-  generatePlugin,
-  getArg,
-  Preset,
-  Slider,
-  SLIDER_DEFAULTS,
-  ToneBlockTypes,
-} from '@hx-ctrl/hx-loader';
+import { Config, generatePlugin, getArg, Preset, Slider, SLIDER_DEFAULTS, ToneBlockTypes } from '@hx-ctrl/hx-loader';
 import * as fs from 'fs';
 
 const filePath = getArg('path', {
@@ -53,8 +45,7 @@ const getSliderFromPreset = async (): Promise<{
         properties.forEach(([propertyName, property]) => {
           if (!property['@cc']) return;
 
-          const isSwitch =
-            property['@max'] === true || property['@max'] === false;
+          const isSwitch = property['@max'] === true || property['@max'] === false;
 
           if (isSwitch) {
             slidersRecord[property['@cc']] = {

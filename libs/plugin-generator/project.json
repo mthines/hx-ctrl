@@ -1,0 +1,35 @@
+{
+  "root": "libs/plugin-generator",
+  "sourceRoot": "libs/plugin-generator/src",
+  "projectType": "library",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/workspace:run-script",
+      "options": {
+        "script": "build"
+      }
+    },
+    "dev": {
+      "executor": "@nrwl/workspace:run-script",
+      "options": {
+        "script": "dev"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/plugin-generator/**/*.ts"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/plugin-generator"],
+      "options": {
+        "jestConfig": "libs/plugin-generator/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  },
+  "tags": []
+}

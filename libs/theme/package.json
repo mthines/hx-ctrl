@@ -1,0 +1,8 @@
+{
+  "name": "@hx-ctrl/theme",
+  "version": "0.0.1",
+  "scripts": {
+    "generate:variables": "sass src/lib/generator/global.scss:src/generated/global.scss src/lib/generator/export.module.scss:src/generated/export.module.scss --no-source-map",
+    "generate:variables:dev": "yarn generate:variables --watch"
+  }
+}

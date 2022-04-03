@@ -1,12 +1,13 @@
 {
-  "name": "hx-ctrl",
+  "name": "@hx-ctrl/root",
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
     "start": "nx serve",
     "build": "nx build",
     "test": "nx test",
-    "release": "standard-version"
+    "release": "standard-version",
+    "clear": "find . -name 'node_modules' -type d -prune -exec rm -rf '{}' +"
   },
   "private": true,
   "workspaces": [
@@ -23,13 +24,16 @@
     "tslib": "^2.0.0"
   },
   "devDependencies": {
+    "@angular-devkit/core": "^13.3.1",
+    "@angular-devkit/schematics": "^13.3.1",
     "@nrwl/cli": "13.9.5",
     "@nrwl/cypress": "13.9.5",
-    "standard-version": "^9.3.2",
     "@nrwl/eslint-plugin-nx": "13.9.5",
     "@nrwl/jest": "13.9.5",
     "@nrwl/linter": "13.9.5",
+    "@nrwl/next": "13.9.5",
     "@nrwl/node": "^13.9.5",
+    "@nrwl/nx": "^7.8.7",
     "@nrwl/nx-cloud": "latest",
     "@nrwl/react": "13.9.5",
     "@nrwl/web": "13.9.5",
@@ -44,6 +48,7 @@
     "@typescript-eslint/parser": "~5.10.0",
     "babel-jest": "27.2.3",
     "cypress": "^9.1.0",
+    "electron": "^17.0.0",
     "eslint": "~8.7.0",
     "eslint-config-next": "12.1.1-canary.3",
     "eslint-config-prettier": "8.1.0",
@@ -52,12 +57,14 @@
     "eslint-plugin-jsx-a11y": "6.5.1",
     "eslint-plugin-react": "7.29.3",
     "eslint-plugin-react-hooks": "4.3.0",
+    "exitzero": "^1.0.1",
     "jest": "27.2.3",
     "nx": "13.9.5",
-    "nx-electron": "^12.1.0",
+    "nx-electron": "^13.0.0-alpha.0",
     "prettier": "^2.5.1",
     "react-test-renderer": "17.0.2",
     "sass": "1.43.2",
+    "standard-version": "^9.3.2",
     "ts-jest": "27.0.5",
     "typescript": "~4.5.2"
   }

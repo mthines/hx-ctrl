@@ -1,0 +1,11 @@
+{
+  "name": "@hx-ctrl/recoil-persist",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "localforage": "^1.10.0",
+    "recoil": "^0.7.0",
+    "@hx-ctrl/utils-common": "1.0.0"
+  }
+}

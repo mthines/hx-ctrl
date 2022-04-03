@@ -21,7 +21,7 @@
       {
         "groups": [
           ["^((?!((.*).(scss|css))))"],
-          ["^(@project_name/)"],
+          ["^(@hx-ctrl/)"],
           ["^(@apps/.+/components|components/)"],
           ["^(@apps/.+/constants|constants/)"],
           ["^(@apps/.+/config|config/)"],

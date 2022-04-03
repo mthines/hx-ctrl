@@ -1,6 +1,13 @@
 {
   "version": 2,
   "projects": {
-    "hx-loader": "libs/hx-loader"
+    "electron": "apps/electron",
+    "plugin-generator": "libs/plugin-generator",
+    "recoil-persist": "libs/recoil-persist",
+    "theme": "libs/theme",
+    "ui-form": "libs/ui/form",
+    "utils/common": "libs/utils/common",
+    "web": "apps/web",
+    "web-e2e": "apps/web-e2e"
   }
 }

@@ -15,7 +15,11 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@hx-ctrl/hx-loader": ["libs/hx-loader/src/index.ts"]
+      "@ht-ctrl/ui-form": ["libs/ui/form/src/index.ts"],
+      "@hx-ctrl/plugin-generator": ["libs/plugin-generator/src/index.ts"],
+      "@hx-ctrl/recoil-persist": ["libs/recoil-persist/src/index.ts"],
+      "@hx-ctrl/theme": ["libs/theme/src/index.ts"],
+      "@hx-ctrl/utils/common": ["libs/utils/common/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

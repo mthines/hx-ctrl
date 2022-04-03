@@ -1,0 +1,43 @@
+{
+  "root": "libs/ui/form",
+  "sourceRoot": "libs/ui/form/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nrwl/web:rollup",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/libs/ui/form",
+        "tsConfig": "libs/ui/form/tsconfig.lib.json",
+        "project": "libs/ui/form/package.json",
+        "entryFile": "libs/ui/form/src/index.ts",
+        "external": ["react/jsx-runtime"],
+        "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
+        "compiler": "babel",
+        "assets": [
+          {
+            "glob": "libs/ui/form/README.md",
+            "input": ".",
+            "output": "."
+          }
+        ]
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["libs/ui/form/**/*.{ts,tsx,js,jsx}"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/ui/form"],
+      "options": {
+        "jestConfig": "libs/ui/form/jest.config.js",
+        "passWithNoTests": true
+      }
+    }
+  }
+}

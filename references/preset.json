@@ -1,0 +1,2603 @@
+{
+  "data": {
+    "meta": {
+      "name": "27/2/22 CC",
+      "application": "HX Edit",
+      "build_sha": "dafed19",
+      "modifieddate": 1646239867,
+      "appversion": 51476065
+    },
+    "device": 2162689,
+    "tone": {
+      "variax": {
+        "@model": "@variax",
+        "@variax_model": 0,
+        "@variax_str4tuning": 0,
+        "@variax_str1level": 1,
+        "@variax_str5level": 1,
+        "@variax_str1tuning": 0,
+        "@variax_lockctrls": 0,
+        "@variax_str2tuning": 0,
+        "@variax_customtuning": false,
+        "@variax_magmode": false,
+        "@variax_str2level": 1,
+        "@variax_str5tuning": 0,
+        "@variax_str6level": 1,
+        "@variax_toneknob": -0.10000002384185791,
+        "@variax_str3level": 1,
+        "@variax_str3tuning": 0,
+        "@variax_str6tuning": 0,
+        "@variax_volumeknob": -0.10000002384185791,
+        "@variax_str4level": 1
+      },
+      "dtdual": {
+        "@dt_topology": 0,
+        "@dt_tubeconfig": 0,
+        "@model": "@dt",
+        "@dt_channel": 0,
+        "@dt_reverb": true,
+        "@dt_poweramp": 1,
+        "@dt_12ax7boost": 0,
+        "@dt_bplusvoltage": 0,
+        "@dt_feedbackcap": 0,
+        "@dt_revmix": 0.25
+      },
+      "global": {
+        "@PowercabVoicing": 0,
+        "@model": "@global_params",
+        "@topology0": "A",
+        "@cursor_dsp": 0,
+        "@PowercabMode": 0,
+        "@guitarpad": 0,
+        "@pedalstate": 2,
+        "@cursor_group": "block0",
+        "@DtSelect": 2,
+        "@cursor_path": 0,
+        "@current_snapshot": 0,
+        "@tempo": 120,
+        "@cursor_position": 0,
+        "@topology1": "AB",
+        "@PowercabSelect": 2,
+        "@guitarinputZ": 0
+      },
+      "dt0": {
+        "@dt_topology": 0,
+        "@dt_tubeconfig": 0,
+        "@model": "@dt",
+        "@dt_channel": 0,
+        "@dt_reverb": true,
+        "@dt_poweramp": 1,
+        "@dt_12ax7boost": 0,
+        "@dt_bplusvoltage": 0,
+        "@dt_feedbackcap": 0,
+        "@dt_revmix": 0.25
+      },
+      "powercabdual": {
+        "@model": "@powercab",
+        "@powercab_color": 0,
+        "@powercab_mic": 0,
+        "@powercab_flatlevel": 0,
+        "@powercab_irlevel": -18,
+        "@powercab_hicut": 20100,
+        "@powercab_lowcut": 19.899999618530273,
+        "@powercab_distance": 3.5,
+        "@powercab_speakerlevel": -15,
+        "@powercab_userir": 0,
+        "@powercab_speaker": 0
+      },
+      "snapshot0": {
+        "@name": "Ld",
+        "@tempo": 120,
+        "@valid": true,
+        "blocks": {
+          "dsp1": {
+            "block0": true,
+            "block1": true,
+            "block2": false,
+            "block3": false,
+            "block4": true,
+            "block5": false,
+            "block6": true,
+            "block10": true,
+            "block7": true,
+            "block8": false,
+            "block9": true
+          },
+          "dsp0": {
+            "block0": true,
+            "block4": true,
+            "block1": true,
+            "block5": true,
+            "block2": true,
+            "block3": true
+          }
+        },
+        "@pedalstate": 2,
+        "@ledcolor": 2,
+        "controllers": {
+          "dsp1": {
+            "block0": {
+              "Index": {
+                "@fs_enabled": false,
+                "@value": 36
+              }
+            },
+            "block1": {
+              "LowGain": {
+                "@fs_enabled": false,
+                "@value": 1.6000003814697266
+              },
+              "HighGain": {
+                "@fs_enabled": false,
+                "@value": -4.9000000953674316
+              },
+              "MidGain": {
+                "@fs_enabled": false,
+                "@value": -3.1999998092651367
+              }
+            },
+            "block3": {
+              "DynAttack": {
+                "@fs_enabled": false,
+                "@value": 0.04999995231628418
+              },
+              "DynRel": {
+                "@fs_enabled": false,
+                "@value": 0.89999997615814209
+              },
+              "Feedback": {
+                "@fs_enabled": false,
+                "@value": 0.41999995708465576
+              },
+              "@trails": {
+                "@fs_enabled": false,
+                "@value": false
+              },
+              "Ducking": {
+                "@fs_enabled": false,
+                "@value": 0.27999997138977051
+              },
+              "Mix": {
+                "@fs_enabled": false,
+                "@value": 0.45000004768371582
+              }
+            },
+            "block4": {
+              "Decay": {
+                "@fs_enabled": false,
+                "@value": 0.60000002384185791
+              },
+              "Mix": {
+                "@fs_enabled": false,
+                "@value": 0.070000052452087402
+              },
+              "Predelay": {
+                "@fs_enabled": false,
+                "@value": 0
+              },
+              "RoomSize": {
+                "@fs_enabled": false,
+                "@value": 0
+              }
+            },
+            "block5": {
+              "Mix": {
+                "@fs_enabled": false,
+                "@value": 0.27999997138977051
+              }
+            },
+            "block6": {
+              "R Polarity": {
+                "@fs_enabled": false,
+                "@value": false
+              },
+              "Width": {
+                "@fs_enabled": false,
+                "@value": 0.79999995231628418
+              }
+            },
+            "outputA": {
+              "pan": {
+                "@fs_enabled": false,
+                "@value": 0.49677169322967529
+              },
+              "gain": {
+                "@fs_enabled": false,
+                "@value": -0.019685685634613037
+              }
+            }
+          },
+          "dsp0": {
+            "block0": {
+              "HeelShift": {
+                "@fs_enabled": false,
+                "@value": -12
+              },
+              "Position": {
+                "@fs_enabled": false,
+                "@value": 1
+              },
+              "Mix": {
+                "@fs_enabled": false,
+                "@value": 1
+              },
+              "ToeShift": {
+                "@fs_enabled": false,
+                "@value": 0
+              }
+            },
+            "block4": {
+              "Level": {
+                "@fs_enabled": false,
+                "@value": 0.56999993324279785
+              },
+              "Tone": {
+                "@fs_enabled": false,
+                "@value": 0.74000000953674316
+              },
+              "Gain": {
+                "@fs_enabled": false,
+                "@value": 0.039999961853027344
+              }
+            },
+            "block1": {
+              "Attack": {
+                "@fs_enabled": false,
+                "@value": 0.037999987602233887
+              },
+              "Threshold": {
+                "@fs_enabled": false,
+                "@value": -37.099998474121094
+              },
+              "Mix": {
+                "@fs_enabled": false,
+                "@value": 0.39999997615814209
+              },
+              "Level": {
+                "@fs_enabled": false,
+                "@value": 2.5
+              },
+              "Ratio": {
+                "@fs_enabled": false,
+                "@value": 3
+              }
+            },
+            "block5": {
+              "ChVol": {
+                "@fs_enabled": false,
+                "@value": 0.72000002861022949
+              },
+              "Bass": {
+                "@fs_enabled": false,
+                "@value": 0.37000000476837158
+              },
+              "Drive": {
+                "@fs_enabled": false,
+                "@value": 0.47000002861022949
+              },
+              "Presence": {
+                "@fs_enabled": false,
+                "@value": 0.85000002384185791
+              },
+              "Depth": {
+                "@fs_enabled": false,
+                "@value": 0.13999998569488525
+              }
+            },
+            "outputA": {
+              "gain": {
+                "@fs_enabled": false,
+                "@value": 0
+              }
+            },
+            "block3": {
+              "Threshold": {
+                "@fs_enabled": false,
+                "@value": -40.5
+              }
+            }
+          }
+        },
+        "@custom_name": false
+      },
+      "snapshot2": {
+        "@name": "Chr",
+        "@tempo": 120,
+        "@valid": true,
+        "blocks": {
+          "dsp1": {
+            "block0": true,
+            "block1": true,
+            "block2": false,
+            "block3": true,
+            "block4": true,
+            "block5": true,
+            "block6": true,
+            "block10": true,
+            "block7": true,
+            "block8": false,
+            "block9": true
+          },
+          "dsp0": {
+            "block0": true,
+            "block4": true,
+            "block1": true,
+            "block5": true,
+            "block2": true,
+            "block3": true
+          }
+        },
+        "@pedalstate": 2,
+        "@ledcolor": 8,
+        "controllers": {
+          "dsp1": {
+            "block0": {
+              "Index": {
+                "@fs_enabled": false,
+                "@value": 36
+              }
+            },
+            "block1": {
+              "LowGain": {
+                "@fs_enabled": false,
+                "@value": -0.30000019073486328
+              },
+              "HighGain": {
+                "@fs_enabled": false,
+                "@value": -2.1000003814697266
+              },
+              "MidGain": {
+                "@fs_enabled": false,
+                "@value": -1.3000001907348633
+              }
+            },
+            "block3": {
+              "DynAttack": {
+                "@fs_enabled": false,
+                "@value": 0.04999995231628418
+              },
+              "DynRel": {
+                "@fs_enabled": false,
+                "@value": 0.89999997615814209
+              },
+              "Feedback": {
+                "@fs_enabled": false,
+                "@value": 0.21000003814697266
+              },
+              "@trails": {
+                "@fs_enabled": false,
+                "@value": false
+              },
+              "Ducking": {
+                "@fs_enabled": false,
+                "@value": 0.48000001907348633
+              },
+              "Mix": {
+                "@fs_enabled": false,
+                "@value": 0.37000000476837158
+              }
+            },
+            "block4": {
+              "Decay": {
+                "@fs_enabled": false,
+                "@value": 7.1000003814697266
+              },
+              "Mix": {
+                "@fs_enabled": false,
+                "@value": 0.20000004768371582
+              },
+              "Predelay": {
+                "@fs_enabled": false,
+                "@value": 0
+              },
+              "RoomSize": {
+                "@fs_enabled": false,
+                "@value": 0
+              }
+            },
+            "block5": {
+              "Mix": {
+                "@fs_enabled": false,
+                "@value": 0.41999995708465576
+              }
+            },
+            "block6": {
+              "R Polarity": {
+                "@fs_enabled": false,
+                "@value": false
+              },
+              "Width": {
+                "@fs_enabled": false,
+                "@value": 1
+              }
+            },
+            "outputA": {
+              "pan": {
+                "@fs_enabled": false,
+                "@value": 0.49677169322967529
+              },
+              "gain": {
+                "@fs_enabled": false,
+                "@value": -0.019685685634613037
+              }
+            }
+          },
+          "dsp0": {
+            "block0": {
+              "HeelShift": {
+                "@fs_enabled": false,
+                "@value": -12
+              },
+              "Position": {
+                "@fs_enabled": false,
+                "@value": 1
+              },
+              "Mix": {
+                "@fs_enabled": false,
+                "@value": 1
+              },
+              "ToeShift": {
+                "@fs_enabled": false,
+                "@value": 0
+              }
+            },
+            "block4": {
+              "Level": {
+                "@fs_enabled": false,
+                "@value": 0.72000002861022949
+              },
+              "Tone": {
+                "@fs_enabled": false,
+                "@value": 0.34000003337860107
+              },
+              "Gain": {
+                "@fs_enabled": false,
+                "@value": 0.070000052452087402
+              }
+            },
+            "block1": {
+              "Attack": {
+                "@fs_enabled": false,
+                "@value": 0.037999987602233887
+              },
+              "Threshold": {
+                "@fs_enabled": false,
+                "@value": -37.099998474121094
+              },
+              "Mix": {
+                "@fs_enabled": false,
+                "@value": 0.39999997615814209
+              },
+              "Level": {
+                "@fs_enabled": false,
+                "@value": 2.5
+              },
+              "Ratio": {
+                "@fs_enabled": false,
+                "@value": 3
+              }
+            },
+            "block5": {
+              "ChVol": {
+                "@fs_enabled": false,
+                "@value": 0.75999999046325684
+              },
+              "Bass": {
+                "@fs_enabled": false,
+                "@value": 0.43000006675720215
+              },
+              "Drive": {
+                "@fs_enabled": false,
+                "@value": 0.34000003337860107
+              },
+              "Presence": {
+                "@fs_enabled": false,
+                "@value": 0.64999997615814209
+              },
+              "Depth": {
+                "@fs_enabled": false,
+                "@value": 0.13999998569488525
+              }
+            },
+            "outputA": {
+              "gain": {
+                "@fs_enabled": false,
+                "@value": 0.1999969482421875
+              }
+            },
+            "block3": {
+              "Threshold": {
+                "@fs_enabled": false,
+                "@value": -49.400001525878906
+              }
+            }
+          }
+        },
+        "@custom_name": false
+      },
+      "snapshot4": {
+        "@name": "Sl",
+        "@tempo": 120,
+        "@valid": true,
+        "blocks": {
+          "dsp1": {
+            "block0": true,
+            "block1": true,
+            "block2": false,
+            "block3": true,
+            "block4": true,
+            "block5": false,
+            "block6": true,
+            "block10": true,
+            "block7": true,
+            "block8": false,
+            "block9": true
+          },
+          "dsp0": {
+            "block0": true,
+            "block4": true,
+            "block1": true,
+            "block5": true,
+            "block2": true,
+            "block3": true
+          }
+        },
+        "@pedalstate": 2,
+        "@ledcolor": 6,
+        "controllers": {
+          "dsp1": {
+            "block0": {
+              "Index": {
+                "@fs_enabled": false,
+                "@value": 36
+              }
+            },
+            "block1": {
+              "LowGain": {
+                "@fs_enabled": false,
+                "@value": 1.6000003814697266
+              },
+              "HighGain": {
+                "@fs_enabled": false,
+                "@value": -2
+              },
+              "MidGain": {
+                "@fs_enabled": false,
+                "@value": -3.1999998092651367
+              }
+            },
+            "block3": {
+              "DynAttack": {
+                "@fs_enabled": false,
+                "@value": 0.04999995231628418
+              },
+              "DynRel": {
+                "@fs_enabled": false,
+                "@value": 0.89999997615814209
+              },
+              "Feedback": {
+                "@fs_enabled": false,
+                "@value": 0.23000001907348633
+              },
+              "@trails": {
+                "@fs_enabled": false,
+                "@value": false
+              },
+              "Ducking": {
+                "@fs_enabled": false,
+                "@value": 0.30999994277954102
+              },
+              "Mix": {
+                "@fs_enabled": false,
+                "@value": 0.40999996662139893
+              }
+            },
+            "block4": {
+              "Decay": {
+                "@fs_enabled": false,
+                "@value": 3.5
+              },
+              "Mix": {
+                "@fs_enabled": false,
+                "@value": 0.090000033378601074
+              },
+              "Predelay": {
+                "@fs_enabled": false,
+                "@value": 0
+              },
+              "RoomSize": {
+                "@fs_enabled": false,
+                "@value": 0
+              }
+            },
+            "block5": {
+              "Mix": {
+                "@fs_enabled": false,
+                "@value": 0.27999997138977051
+              }
+            },
+            "block6": {
+              "R Polarity": {
+                "@fs_enabled": false,
+                "@value": false
+              },
+              "Width": {
+                "@fs_enabled": false,
+                "@value": 0.95000004768371582
+              }
+            },
+            "outputA": {
+              "pan": {
+                "@fs_enabled": false,
+                "@value": 0.49677169322967529
+              },
+              "gain": {
+                "@fs_enabled": false,
+                "@value": -0.019685685634613037
+              }
+            }
+          },
+          "dsp0": {
+            "block0": {
+              "HeelShift": {
+                "@fs_enabled": false,
+                "@value": -12
+              },
+              "Position": {
+                "@fs_enabled": false,
+                "@value": 1
+              },
+              "Mix": {
+                "@fs_enabled": false,
+                "@value": 1
+              },
+              "ToeShift": {
+                "@fs_enabled": false,
+                "@value": 0
+              }
+            },
+            "block4": {
+              "Level": {
+                "@fs_enabled": false,
+                "@value": 0.70000004768371582
+              },
+              "Tone": {
+                "@fs_enabled": false,
+                "@value": 0.74000000953674316
+              },
+              "Gain": {
+                "@fs_enabled": false,
+                "@value": 0.039999961853027344
+              }
+            },
+            "block1": {
+              "Attack": {
+                "@fs_enabled": false,
+                "@value": 0.037999987602233887
+              },
+              "Threshold": {
+                "@fs_enabled": false,
+                "@value": -46
+              },
+              "Mix": {
+                "@fs_enabled": false,
+                "@value": 0.54999995231628418
+              },
+              "Level": {
+                "@fs_enabled": false,
+                "@value": 7
+              },
+              "Ratio": {
+                "@fs_enabled": false,
+                "@value": 3
+              }
+            },
+            "block5": {
+              "ChVol": {
+                "@fs_enabled": false,
+                "@value": 0.73000001907348633
+              },
+              "Bass": {
+                "@fs_enabled": false,
+                "@value": 0.37000000476837158
+              },
+              "Drive": {
+                "@fs_enabled": false,
+                "@value": 0.39999997615814209
+              },
+              "Presence": {
+                "@fs_enabled": false,
+                "@value": 0.85000002384185791
+              },
+              "Depth": {
+                "@fs_enabled": false,
+                "@value": 0.13999998569488525
+              }
+            },
+            "outputA": {
+              "gain": {
+                "@fs_enabled": false,
+                "@value": 0
+              }
+            },
+            "block3": {
+              "Threshold": {
+                "@fs_enabled": false,
+                "@value": -46.099998474121094
+              }
+            }
+          }
+        },
+        "@custom_name": false
+      },
+      "powercab1": {
+        "@model": "@powercab",
+        "@powercab_color": 0,
+        "@powercab_mic": 0,
+        "@powercab_flatlevel": 0,
+        "@powercab_irlevel": -18,
+        "@powercab_hicut": 20100,
+        "@powercab_lowcut": 19.899999618530273,
+        "@powercab_distance": 3.5,
+        "@powercab_speakerlevel": -15,
+        "@powercab_userir": 0,
+        "@powercab_speaker": 0
+      },
+      "dsp0": {
+        "join": {
+          "@model": "HD2_AppDSPFlowJoin",
+          "B Pan": 0.5,
+          "@no_snapshot_bypass": false,
+          "B Level": 0,
+          "A Level": 0,
+          "A Pan": 0.5,
+          "@position": 8,
+          "Level": 0,
+          "@enabled": true,
+          "B Polarity": false
+        },
+        "block3": {
+          "@model": "HD2_GateNoiseGate",
+          "@no_snapshot_bypass": false,
+          "@path": 0,
+          "@stereo": false,
+          "@type": 0,
+          "Decay": 0.088000059127807617,
+          "Threshold": -40.5,
+          "@position": 5,
+          "Level": 0,
+          "@enabled": true
+        },
+        "block2": {
+          "@model": "HD2_VolPanGain",
+          "@no_snapshot_bypass": false,
+          "@path": 0,
+          "@stereo": false,
+          "@type": 0,
+          "Gain": 0,
+          "@position": 4,
+          "@enabled": true
+        },
+        "inputB": {
+          "@input": 0,
+          "@model": "HD2_AppDSPFlow2Input",
+          "noiseGate": false,
+          "decay": 0.5,
+          "threshold": -48
+        },
+        "block1": {
+          "@model": "HD2_CompressorDeluxeComp",
+          "@position": 1,
+          "@no_snapshot_bypass": false,
+          "Threshold": -37.099998474121094,
+          "Release": 0.20000004768371582,
+          "@enabled": true,
+          "Knee": 6,
+          "@path": 0,
+          "@type": 0,
+          "Attack": 0.037999987602233887,
+          "Mix": 0.39999997615814209,
+          "Ratio": 3,
+          "Level": 2.5,
+          "@stereo": false
+        },
+        "outputB": {
+          "@model": "HD2_AppDSPFlowOutput",
+          "@output": 0,
+          "pan": 0.5,
+          "gain": 0
+        },
+        "inputA": {
+          "@input": 2,
+          "@model": "HD2_AppDSPFlow1Input",
+          "noiseGate": true,
+          "decay": 0.04999995231628418,
+          "threshold": -45
+        },
+        "split": {
+          "@model": "HD2_AppDSPFlowSplitY",
+          "BalanceA": 0.5,
+          "@no_snapshot_bypass": false,
+          "bypass": false,
+          "@position": 0,
+          "@enabled": true,
+          "BalanceB": 0.5
+        },
+        "block0": {
+          "Position": 1,
+          "@model": "L6SPB_PolyWham",
+          "@position": 0,
+          "@no_snapshot_bypass": false,
+          "Tracking": 1,
+          "@enabled": true,
+          "@path": 0,
+          "@type": 0,
+          "AutoEQ": 0.91000008583068848,
+          "Mix": 1,
+          "ToeShift": 0,
+          "HeelShift": -12,
+          "Level": 1
+        },
+        "block5": {
+          "Bias": 0.5,
+          "@model": "HD2_AmpLine6Badonk",
+          "Master": 0.54999995231628418,
+          "@position": 7,
+          "@no_snapshot_bypass": false,
+          "Drive": 0.47000002861022949,
+          "Sag": 0.080000042915344238,
+          "ChVol": 0.72000002861022949,
+          "@enabled": true,
+          "Treble": 0.64999997615814209,
+          "@path": 0,
+          "@type": 1,
+          "Bass": 0.37000000476837158,
+          "BiasX": 0.5,
+          "Mid": 0.37000000476837158,
+          "@bypassvolume": 1,
+          "Presence": 0.85000002384185791,
+          "Depth": 0.13999998569488525
+        },
+        "outputA": {
+          "@model": "HD2_AppDSPFlowOutput",
+          "@output": 2,
+          "pan": 0.5,
+          "gain": 0
+        },
+        "block4": {
+          "@model": "HD2_DistMinotaur",
+          "@no_snapshot_bypass": false,
+          "@path": 0,
+          "@stereo": false,
+          "@type": 0,
+          "Gain": 0.039999961853027344,
+          "@position": 6,
+          "Level": 0.56999993324279785,
+          "Tone": 0.74000000953674316,
+          "@enabled": true
+        }
+      },
+      "dt1": {
+        "@dt_topology": 0,
+        "@dt_tubeconfig": 0,
+        "@model": "@dt",
+        "@dt_channel": 0,
+        "@dt_reverb": true,
+        "@dt_poweramp": 1,
+        "@dt_12ax7boost": 0,
+        "@dt_bplusvoltage": 0,
+        "@dt_feedbackcap": 0,
+        "@dt_revmix": 0.25
+      },
+      "irUuidTable": {
+        "033": "002f3b1b2e4a409a3b0d8bcaf2b45fa8",
+        "077": "",
+        "081": "cc5c4084566538664526f481c21e6af1",
+        "117": "",
+        "121": "",
+        "034": "43cccda3c5795bd7a41f992e6bbc259f",
+        "078": "",
+        "082": "781f9101470db63bbec7255bf0553b74",
+        "118": "",
+        "122": "",
+        "035": "c47d744d50c8159e63d74da33658a63b",
+        "079": "0326906fd98bc48b8e202e4d6c02d916",
+        "083": "e0d8c1244a08967f238f273c24bec4bc",
+        "119": "",
+        "123": "",
+        "036": "a44bbf166809d23652032012a0e7e084",
+        "040": "9cc56a460a97834ae95348ec777d275c",
+        "084": "9886ff0378ed4d10c827ddbc742b8d2a",
+        "124": "",
+        "037": "13fced23f822c158aeb55e7b158b2eb9",
+        "041": "a14fc02c06d111ad1abe7f29fdadb5bb",
+        "085": "9e0f4cebb97fc39f4ab6404c50dbb075",
+        "125": "",
+        "038": "e9a34b89f1a3cf86efe98d3c2c163da2",
+        "042": "47f134277a656afa32914c9cdd26f906",
+        "086": "071ec660a0d96a48cd81699b44453334",
+        "090": "",
+        "126": "",
+        "039": "18bd78e32b33577f92aceda9b78dda27",
+        "043": "0804160ceb3e1eff9cd6e6ae8455cb85",
+        "087": "091978f768f6c9f5628e5fdad9e48442",
+        "091": "",
+        "127": "",
+        "000": "583fd8a2435988a1e60040fd0c4a174e",
+        "044": "2ddcc4d05beb55ec3f929ca2deff037d",
+        "088": "641275887152748b84e60749ff836985",
+        "092": "",
+        "001": "d8b775831b9d39eddc7a3fc81b541d1f",
+        "045": "1402bbfd2984b1d2a5d02a23ffdb4136",
+        "089": "a104ca31c4010d53b2419d68e524ba77",
+        "093": "",
+        "002": "0f7b9168bbf7411a09f5fb295424712d",
+        "046": "f99f6be44d2f40becef33bd32eaa86d7",
+        "050": "",
+        "094": "",
+        "003": "b3ae6d7f847e29ff22fc35b62fc746c6",
+        "047": "",
+        "051": "",
+        "095": "",
+        "004": "11b28ca08257e102962a1a3b57408d94",
+        "048": "",
+        "052": "",
+        "096": "",
+        "005": "c5ea428347c9ac223a1558bd863cf5d0",
+        "049": "",
+        "053": "",
+        "097": "",
+        "006": "f03785de6e98489403c6f2e6f91815a1",
+        "010": "76685b92e042e48c026e69df8faa5cf0",
+        "054": "",
+        "098": "",
+        "007": "1ac3ad9e74babff7d3a08f664abc67a6",
+        "011": "ee42c603c9f8ebe6d9fbf4f6a1271959",
+        "055": "",
+        "099": "",
+        "008": "51317e43e9520d63325b45208ee30b0f",
+        "012": "ebf1d057a83af58917516215826fb68e",
+        "056": "",
+        "060": "",
+        "100": "",
+        "009": "5ef0eb8e12c850a1de59525668c1bbef",
+        "013": "84dd19634f94f7bc171451d03d0e8e04",
+        "057": "",
+        "061": "",
+        "101": "",
+        "014": "b9bee55433c097caa12e954f550826ab",
+        "058": "",
+        "062": "",
+        "102": "",
+        "015": "deb9179cb86cbf27e3d4ad9f455c8f27",
+        "059": "",
+        "063": "",
+        "103": "",
+        "016": "a6ccd45f99b68217268d4335ec4198b0",
+        "020": "af8323a60aab3e96c1085831677cae1a",
+        "064": "",
+        "104": "",
+        "017": "136d4106f45a28834fbc3cf94af4b235",
+        "021": "546b647e1850f009bf02abe8224c3e3b",
+        "065": "",
+        "105": "",
+        "018": "b43d6e855e1a313c26dc4eb8a1f33924",
+        "022": "3ed342758abbc4541ac9ea044919887b",
+        "066": "",
+        "070": "",
+        "106": "",
+        "110": "",
+        "019": "568614376e3867171eaa767b3f3c7082",
+        "023": "6e8d7fcbe19556d308f6b5c6deca802d",
+        "067": "",
+        "071": "",
+        "107": "",
+        "111": "",
+        "024": "abe7d9b398957672af1d3033aeb7f104",
+        "068": "",
+        "072": "",
+        "108": "",
+        "112": "",
+        "025": "96f6b909594f4d7d9fb563d00b058427",
+        "069": "",
+        "073": "",
+        "109": "",
+        "113": "",
+        "026": "4d71fa0debc24f9818acf196db59449f",
+        "030": "46d6d74838a4e8775ff228538b5989bd",
+        "074": "",
+        "114": "",
+        "027": "6215d3c071323d166be5e8984551392a",
+        "031": "6cd0f4c30ab0eeeb76497be985f1d617",
+        "075": "",
+        "115": "",
+        "028": "83247ac5f1e5cb29896f830b08fd94a2",
+        "032": "ab2318bb16d79ec79178687c385c2dbc",
+        "076": "",
+        "080": "8e81eb7647b901f6197fbe9e81c0d7ac",
+        "116": "",
+        "120": "",
+        "029": "f0baa549ef2803e239f3f17da7ad017e"
+      },
+      "snapshot6": {
+        "@name": "Rb",
+        "@tempo": 120,
+        "@valid": true,
+        "blocks": {
+          "dsp1": {
+            "block0": false,
+            "block1": true,
+            "block2": false,
+            "block3": false,
+            "block4": true,
+            "block5": true,
+            "block6": true,
+            "block10": true,
+            "block7": true,
+            "block8": false,
+            "block9": true
+          },
+          "dsp0": {
+            "block0": true,
+            "block4": false,
+            "block1": true,
+            "block5": false,
+            "block2": true,
+            "block3": true
+          }
+        },
+        "@pedalstate": 2,
+        "@ledcolor": 9,
+        "controllers": {
+          "dsp1": {
+            "block0": {
+              "Index": {
+                "@fs_enabled": false,
+                "@value": 36
+              }
+            },
+            "block1": {
+              "LowGain": {
+                "@fs_enabled": false,
+                "@value": 5.8999996185302734
+              },
+              "HighGain": {
+                "@fs_enabled": false,
+                "@value": 9.1000003814697266
+              },
+              "MidGain": {
+                "@fs_enabled": false,
+                "@value": -6
+              }
+            },
+            "block3": {
+              "DynAttack": {
+                "@fs_enabled": false,
+                "@value": 0.074000000953674316
+              },
+              "DynRel": {
+                "@fs_enabled": false,
+                "@value": 1.1919999122619629
+              },
+              "Feedback": {
+                "@fs_enabled": false,
+                "@value": 0.44000005722045898
+              },
+              "@trails": {
+                "@fs_enabled": false,
+                "@value": false
+              },
+              "Ducking": {
+                "@fs_enabled": false,
+                "@value": 0.27999997138977051
+              },
+              "Mix": {
+                "@fs_enabled": false,
+                "@value": 0.37999999523162842
+              }
+            },
+            "block4": {
+              "Decay": {
+                "@fs_enabled": false,
+                "@value": 3.5
+              },
+              "Mix": {
+                "@fs_enabled": false,
+                "@value": 0.12000000476837158
+              },
+              "Predelay": {
+                "@fs_enabled": false,
+                "@value": 0.018000006675720215
+              },
+              "RoomSize": {
+                "@fs_enabled": false,
+                "@value": 0
+              }
+            },
+            "block5": {
+              "Mix": {
+                "@fs_enabled": false,
+                "@value": 0.29999995231628418
+              }
+            },
+            "block6": {
+              "R Polarity": {
+                "@fs_enabled": false,
+                "@value": false
+              },
+              "Width": {
+                "@fs_enabled": false,
+                "@value": 1
+              }
+            },
+            "outputA": {
+              "pan": {
+                "@fs_enabled": false,
+                "@value": 0.49677169322967529
+              },
+              "gain": {
+                "@fs_enabled": false,
+                "@value": -0.019685685634613037
+              }
+            }
+          },
+          "dsp0": {
+            "block0": {
+              "HeelShift": {
+                "@fs_enabled": false,
+                "@value": -24
+              },
+              "Position": {
+                "@fs_enabled": false,
+                "@value": 1
+              },
+              "Mix": {
+                "@fs_enabled": false,
+                "@value": 0.20000004768371582
+              },
+              "ToeShift": {
+                "@fs_enabled": false,
+                "@value": -12
+              }
+            },
+            "block4": {
+              "Level": {
+                "@fs_enabled": false,
+                "@value": 0.56999993324279785
+              },
+              "Tone": {
+                "@fs_enabled": false,
+                "@value": 0.57999992370605469
+              },
+              "Gain": {
+                "@fs_enabled": false,
+                "@value": 0.039999961853027344
+              }
+            },
+            "block1": {
+              "Attack": {
+                "@fs_enabled": false,
+                "@value": 0.004999995231628418
+              },
+              "Threshold": {
+                "@fs_enabled": false,
+                "@value": -50
+              },
+              "Mix": {
+                "@fs_enabled": false,
+                "@value": 0.81999993324279785
+              },
+              "Level": {
+                "@fs_enabled": false,
+                "@value": 9.1999969482421875
+              },
+              "Ratio": {
+                "@fs_enabled": false,
+                "@value": 3
+              }
+            },
+            "block5": {
+              "ChVol": {
+                "@fs_enabled": false,
+                "@value": 0.75
+              },
+              "Bass": {
+                "@fs_enabled": false,
+                "@value": 0.37000000476837158
+              },
+              "Drive": {
+                "@fs_enabled": false,
+                "@value": 0.47000002861022949
+              },
+              "Presence": {
+                "@fs_enabled": false,
+                "@value": 0.85000002384185791
+              },
+              "Depth": {
+                "@fs_enabled": false,
+                "@value": 0.13999998569488525
+              }
+            },
+            "outputA": {
+              "gain": {
+                "@fs_enabled": false,
+                "@value": 3.1999969482421875
+              }
+            },
+            "block3": {
+              "Threshold": {
+                "@fs_enabled": false,
+                "@value": -40.5
+              }
+            }
+          }
+        },
+        "@custom_name": false
+      },
+      "controller": {
+        "dsp1": {
+          "block0": {
+            "Index": {
+              "@min": 1,
+              "@controller": 19,
+              "@max": 128
+            }
+          },
+          "block1": {
+            "LowGain": {
+              "@min": -12,
+              "@controller": 19,
+              "@max": 12
+            },
+            "HighGain": {
+              "@min": -12,
+              "@controller": 19,
+              "@max": 12
+            },
+            "MidGain": {
+              "@min": -12,
+              "@controller": 19,
+              "@max": 12
+            }
+          },
+          "block3": {
+            "DynAttack": {
+              "@min": 0.0099999904632568359,
+              "@controller": 19,
+              "@max": 2
+            },
+            "DynRel": {
+              "@min": 0.0099999904632568359,
+              "@controller": 19,
+              "@max": 5
+            },
+            "Feedback": {
+              "@min": 0,
+              "@controller": 19,
+              "@max": 1
+            },
+            "@trails": {
+              "@min": false,
+              "@controller": 19,
+              "@max": true
+            },
+            "Ducking": {
+              "@min": 0,
+              "@controller": 19,
+              "@max": 1
+            },
+            "Mix": {
+              "@min": 0,
+              "@controller": 19,
+              "@max": 1
+            }
+          },
+          "block4": {
+            "Decay": {
+              "@min": 0.10000002384185791,
+              "@controller": 19,
+              "@max": 45.099998474121094
+            },
+            "Mix": {
+              "@min": 0,
+              "@controller": 19,
+              "@max": 1
+            },
+            "Predelay": {
+              "@min": 0,
+              "@controller": 19,
+              "@max": 0.20000004768371582
+            },
+            "RoomSize": {
+              "@min": 0,
+              "@controller": 19,
+              "@max": 2
+            }
+          },
+          "block5": {
+            "Mix": {
+              "@min": 0,
+              "@controller": 19,
+              "@max": 1
+            }
+          },
+          "block6": {
+            "R Polarity": {
+              "@min": false,
+              "@controller": 19,
+              "@max": true
+            },
+            "Width": {
+              "@min": 0,
+              "@controller": 19,
+              "@max": 1
+            }
+          },
+          "outputA": {
+            "pan": {
+              "@cc": 11,
+              "@min": 0.125,
+              "@max": 0.875,
+              "@controller": 18
+            },
+            "gain": {
+              "@cc": 10,
+              "@min": -20.5,
+              "@max": 5,
+              "@controller": 18
+            }
+          }
+        },
+        "dsp0": {
+          "block0": {
+            "HeelShift": {
+              "@min": -36,
+              "@controller": 19,
+              "@max": 24
+            },
+            "Position": {
+              "@cc": 12,
+              "@min": 0,
+              "@max": 1,
+              "@controller": 18
+            },
+            "Mix": {
+              "@min": 0,
+              "@controller": 19,
+              "@max": 1
+            },
+            "ToeShift": {
+              "@min": -36,
+              "@controller": 19,
+              "@max": 24
+            }
+          },
+          "block4": {
+            "Level": {
+              "@min": 0,
+              "@controller": 19,
+              "@max": 1
+            },
+            "Tone": {
+              "@min": 0,
+              "@controller": 19,
+              "@max": 1
+            },
+            "Gain": {
+              "@min": 0,
+              "@controller": 19,
+              "@max": 1
+            }
+          },
+          "block1": {
+            "Attack": {
+              "@min": 0.00010001659393310547,
+              "@controller": 19,
+              "@max": 0.20000004768371582
+            },
+            "Threshold": {
+              "@min": -60,
+              "@controller": 19,
+              "@max": 0
+            },
+            "Mix": {
+              "@min": 0,
+              "@controller": 19,
+              "@max": 1
+            },
+            "Level": {
+              "@min": -60,
+              "@controller": 19,
+              "@max": 36
+            },
+            "Ratio": {
+              "@min": 0,
+              "@controller": 19,
+              "@max": 5
+            }
+          },
+          "block5": {
+            "ChVol": {
+              "@min": 0,
+              "@controller": 19,
+              "@max": 1
+            },
+            "Bass": {
+              "@min": 0,
+              "@controller": 19,
+              "@max": 1
+            },
+            "Drive": {
+              "@min": 0,
+              "@controller": 19,
+              "@max": 1
+            },
+            "Presence": {
+              "@min": 0,
+              "@controller": 19,
+              "@max": 1
+            },
+            "Depth": {
+              "@min": 0,
+              "@controller": 19,
+              "@max": 1
+            }
+          },
+          "outputA": {
+            "gain": {
+              "@min": -120,
+              "@controller": 19,
+              "@max": 20
+            }
+          },
+          "block3": {
+            "Threshold": {
+              "@min": -96,
+              "@controller": 19,
+              "@max": 0
+            }
+          }
+        }
+      },
+      "dsp1": {
+        "outputA": {
+          "@model": "HD2_AppDSPFlowOutput",
+          "@output": 5,
+          "pan": 0.49677169322967529,
+          "gain": -0.019685685634613037
+        },
+        "block9": {
+          "@model": "HD2_DL4DynamicDelayStereo",
+          "@position": 6,
+          "@no_snapshot_bypass": false,
+          "Feedback": 0.13999998569488525,
+          "SyncSelect1": 9,
+          "TempoSync1": true,
+          "@enabled": true,
+          "Ducking": 0.30999994277954102,
+          "Threshold": 0.5,
+          "@path": 1,
+          "@trails": false,
+          "@type": 7,
+          "Mix": 0.11000001430511475,
+          "Time": 0.43700003623962402,
+          "Level": 0
+        },
+        "block3": {
+          "@trails": false,
+          "@enabled": false,
+          "@type": 7,
+          "DynAttack": 0.04999995231628418,
+          "Ducking": 0.27999997138977051,
+          "SyncSelect1": 6,
+          "@model": "HD2_DelayDuckedDelay",
+          "@stereo": true,
+          "DynRel": 0.89999997615814209,
+          "LowCut": 120,
+          "@path": 0,
+          "Level": -0.036703109741210938,
+          "Mix": 0.45000004768371582,
+          "Feedback": 0.41999995708465576,
+          "HighCut": 7700,
+          "Scale": 0.5,
+          "Threshold": 0.49000000953674316,
+          "@position": 4,
+          "TempoSync1": true,
+          "@no_snapshot_bypass": false,
+          "DynType": false,
+          "Time": 0.5
+        },
+        "join": {
+          "@model": "HD2_AppDSPFlowJoin",
+          "B Pan": 0.5,
+          "@no_snapshot_bypass": false,
+          "B Level": 0,
+          "A Level": 0,
+          "A Pan": 0.5,
+          "@position": 8,
+          "Level": 0,
+          "@enabled": true,
+          "B Polarity": false
+        },
+        "block8": {
+          "@model": "HD2_RetroReel",
+          "@position": 1,
+          "@no_snapshot_bypass": false,
+          "LowCut": 19.899999618530273,
+          "@enabled": false,
+          "Texture": 0.87000000476837158,
+          "TapeSpeed": 2,
+          "@path": 1,
+          "@type": 0,
+          "WowFluttr": 0,
+          "Level": -5,
+          "@stereo": false,
+          "Saturation": 0.080000042915344238,
+          "HighCut": 20100
+        },
+        "block2": {
+          "@model": "HD2_TremoloTremolo",
+          "@position": 3,
+          "@no_snapshot_bypass": false,
+          "SyncSelect1": 13,
+          "Intensity": 0.12999999523162842,
+          "Speed": 7.6999998092651367,
+          "@enabled": false,
+          "DutyCycle": 0.5,
+          "TempoSync1": true,
+          "@path": 0,
+          "@type": 0,
+          "Level": -0.036703109741210938,
+          "@stereo": true,
+          "Spread": 0.63999998569488525,
+          "WaveShape": 4
+        },
+        "inputB": {
+          "@input": 6,
+          "@model": "HD2_AppDSPFlow2Input",
+          "noiseGate": true,
+          "decay": 0.5,
+          "threshold": -48
+        },
+        "block7": {
+          "Mid Thresh": -36,
+          "@enabled": true,
+          "Lo Thresh": -43,
+          "Lo X Freq": 400,
+          "Attack": 0.036999940872192383,
+          "@type": 0,
+          "Mid Gain": 1.5,
+          "Lo Gain": -2,
+          "Hi Thresh": -40.900001525878906,
+          "Hi Gain": 2.5,
+          "Hi X Freq": 5000,
+          "@model": "HD2_Compressor3BandComp",
+          "@stereo": false,
+          "@path": 1,
+          "Detector": true,
+          "Level": 6,
+          "Release": 0.20000004768371582,
+          "@position": 0,
+          "Ratio": 1,
+          "@no_snapshot_bypass": false
+        },
+        "block1": {
+          "HighQ": 7.5,
+          "@model": "HD2_EQParametric",
+          "HighGain": -4.9000000953674316,
+          "@position": 1,
+          "@no_snapshot_bypass": false,
+          "LowCut": 50,
+          "LowFreq": 121,
+          "LowQ": 8.1000003814697266,
+          "@enabled": true,
+          "MidFreq": 2700,
+          "MidGain": -3.1999998092651367,
+          "@path": 0,
+          "@type": 0,
+          "LowGain": 1.6000003814697266,
+          "MidQ": 7.6999988555908203,
+          "Level": 1.7999992370605469,
+          "@stereo": false,
+          "HighCut": 18000,
+          "HighFreq": 3500
+        },
+        "outputB": {
+          "@model": "HD2_AppDSPFlowOutput",
+          "@output": 6,
+          "pan": 0.5,
+          "gain": 0
+        },
+        "inputA": {
+          "@input": 0,
+          "@model": "HD2_AppDSPFlow1Input",
+          "noiseGate": false,
+          "decay": 0.5,
+          "threshold": -48
+        },
+        "block6": {
+          "@model": "HD2_VolPanStereoWidth",
+          "@no_snapshot_bypass": false,
+          "@path": 0,
+          "@type": 0,
+          "Balance": 0.5,
+          "LR In Swap": false,
+          "@position": 7,
+          "Level": 0,
+          "R Polarity": false,
+          "@enabled": true,
+          "Width": 0.79999995231628418
+        },
+        "block0": {
+          "@model": "HD2_ImpulseResponse1024",
+          "@position": 0,
+          "@no_snapshot_bypass": false,
+          "LowCut": 90,
+          "Index": 36,
+          "@enabled": true,
+          "@path": 0,
+          "@type": 5,
+          "Mix": 1,
+          "Level": -18,
+          "@uuid": "c47d744d50c8159e63d74da33658a63b",
+          "HighCut": 12000
+        },
+        "split": {
+          "@model": "HD2_AppDSPFlowSplitY",
+          "BalanceA": 0.5,
+          "@no_snapshot_bypass": false,
+          "bypass": false,
+          "@position": 0,
+          "@enabled": true,
+          "BalanceB": 0.5
+        },
+        "block5": {
+          "CenterBoost": false,
+          "@enabled": false,
+          "Preset": true,
+          "Right": 0.85000002384185791,
+          "@type": 0,
+          "Manual": true,
+          "SyncSelect1": 6,
+          "@model": "HD2_ChorusTrinityChorus",
+          "@path": 0,
+          "Left": 0.78999996185302734,
+          "LeftBoost": true,
+          "Center": 0.27999997138977051,
+          "Level": -1,
+          "Mix": 0.27999997138977051,
+          "RightBoost": true,
+          "@position": 6,
+          "Mode": true,
+          "@no_snapshot_bypass": false,
+          "Rate": 0.21000003814697266,
+          "TempoSync1": false
+        },
+        "block10": {
+          "BassFreq": 100,
+          "@model": "VIC_DynPlate",
+          "PreDelay": 0.03600001335144043,
+          "@position": 7,
+          "@no_snapshot_bypass": false,
+          "LowCut": 100,
+          "VarDelayAmpl": 0.52999997138977051,
+          "@enabled": true,
+          "Damping": 2000,
+          "MatrFreq": 0.27999997138977051,
+          "@path": 1,
+          "@trails": false,
+          "@type": 7,
+          "Mix": 0.080000042915344238,
+          "BassBoost": 0,
+          "Level": 0,
+          "@stereo": true,
+          "Decay": 1.0999999046325684,
+          "HighCut": 10000
+        },
+        "block4": {
+          "RoomSize": 0,
+          "@trails": false,
+          "BassFreq": 100,
+          "@enabled": true,
+          "Diffusion": 0.70000004768371582,
+          "@type": 7,
+          "Motion": 0.24000000953674316,
+          "Damping": 3000,
+          "@model": "VIC_ReverbRotating",
+          "@stereo": true,
+          "Decay": 0.60000002384185791,
+          "LowCut": 117,
+          "@path": 0,
+          "Level": 0,
+          "Mix": 0.070000052452087402,
+          "BassBoost": 0,
+          "HighCut": 6300,
+          "@position": 5,
+          "@no_snapshot_bypass": false,
+          "Predelay": 0
+        }
+      },
+      "snapshot1": {
+        "@name": "Ld -5",
+        "@tempo": 120,
+        "@valid": true,
+        "blocks": {
+          "dsp1": {
+            "block0": true,
+            "block1": true,
+            "block2": false,
+            "block3": false,
+            "block4": true,
+            "block5": false,
+            "block6": true,
+            "block10": true,
+            "block7": true,
+            "block8": true,
+            "block9": true
+          },
+          "dsp0": {
+            "block0": true,
+            "block4": true,
+            "block1": true,
+            "block5": true,
+            "block2": true,
+            "block3": true
+          }
+        },
+        "@pedalstate": 2,
+        "@ledcolor": 3,
+        "controllers": {
+          "dsp1": {
+            "block0": {
+              "Index": {
+                "@fs_enabled": false,
+                "@value": 36
+              }
+            },
+            "block1": {
+              "LowGain": {
+                "@fs_enabled": false,
+                "@value": -0.60000038146972656
+              },
+              "HighGain": {
+                "@fs_enabled": false,
+                "@value": -4
+              },
+              "MidGain": {
+                "@fs_enabled": false,
+                "@value": -6
+              }
+            },
+            "block3": {
+              "DynAttack": {
+                "@fs_enabled": false,
+                "@value": 0.04999995231628418
+              },
+              "DynRel": {
+                "@fs_enabled": false,
+                "@value": 0.89999997615814209
+              },
+              "Feedback": {
+                "@fs_enabled": false,
+                "@value": 0.57999992370605469
+              },
+              "@trails": {
+                "@fs_enabled": false,
+                "@value": false
+              },
+              "Ducking": {
+                "@fs_enabled": false,
+                "@value": 0
+              },
+              "Mix": {
+                "@fs_enabled": false,
+                "@value": 0.39999997615814209
+              }
+            },
+            "block4": {
+              "Decay": {
+                "@fs_enabled": false,
+                "@value": 0.60000002384185791
+              },
+              "Mix": {
+                "@fs_enabled": false,
+                "@value": 0.070000052452087402
+              },
+              "Predelay": {
+                "@fs_enabled": false,
+                "@value": 0
+              },
+              "RoomSize": {
+                "@fs_enabled": false,
+                "@value": 0
+              }
+            },
+            "block5": {
+              "Mix": {
+                "@fs_enabled": false,
+                "@value": 0.29999995231628418
+              }
+            },
+            "block6": {
+              "R Polarity": {
+                "@fs_enabled": false,
+                "@value": false
+              },
+              "Width": {
+                "@fs_enabled": false,
+                "@value": 0.79999995231628418
+              }
+            },
+            "outputA": {
+              "pan": {
+                "@fs_enabled": false,
+                "@value": 0.49677169322967529
+              },
+              "gain": {
+                "@fs_enabled": false,
+                "@value": -0.019685685634613037
+              }
+            }
+          },
+          "dsp0": {
+            "block0": {
+              "HeelShift": {
+                "@fs_enabled": false,
+                "@value": -12
+              },
+              "Position": {
+                "@fs_enabled": false,
+                "@value": 1
+              },
+              "Mix": {
+                "@fs_enabled": false,
+                "@value": 1
+              },
+              "ToeShift": {
+                "@fs_enabled": false,
+                "@value": -5
+              }
+            },
+            "block4": {
+              "Level": {
+                "@fs_enabled": false,
+                "@value": 0.56999993324279785
+              },
+              "Tone": {
+                "@fs_enabled": false,
+                "@value": 0.57999992370605469
+              },
+              "Gain": {
+                "@fs_enabled": false,
+                "@value": 0.039999961853027344
+              }
+            },
+            "block1": {
+              "Attack": {
+                "@fs_enabled": false,
+                "@value": 0.037999987602233887
+              },
+              "Threshold": {
+                "@fs_enabled": false,
+                "@value": -37.099998474121094
+              },
+              "Mix": {
+                "@fs_enabled": false,
+                "@value": 0.39999997615814209
+              },
+              "Level": {
+                "@fs_enabled": false,
+                "@value": 2.5
+              },
+              "Ratio": {
+                "@fs_enabled": false,
+                "@value": 3
+              }
+            },
+            "block5": {
+              "ChVol": {
+                "@fs_enabled": false,
+                "@value": 0.75
+              },
+              "Bass": {
+                "@fs_enabled": false,
+                "@value": 0.37000000476837158
+              },
+              "Drive": {
+                "@fs_enabled": false,
+                "@value": 0.47000002861022949
+              },
+              "Presence": {
+                "@fs_enabled": false,
+                "@value": 0.85000002384185791
+              },
+              "Depth": {
+                "@fs_enabled": false,
+                "@value": 0.13999998569488525
+              }
+            },
+            "outputA": {
+              "gain": {
+                "@fs_enabled": false,
+                "@value": 0
+              }
+            },
+            "block3": {
+              "Threshold": {
+                "@fs_enabled": false,
+                "@value": -40.5
+              }
+            }
+          }
+        },
+        "@custom_name": false
+      },
+      "powercab0": {
+        "@model": "@powercab",
+        "@powercab_color": 0,
+        "@powercab_mic": 0,
+        "@powercab_flatlevel": 0,
+        "@powercab_irlevel": -18,
+        "@powercab_hicut": 20100,
+        "@powercab_lowcut": 19.899999618530273,
+        "@powercab_distance": 3.5,
+        "@powercab_speakerlevel": -15,
+        "@powercab_userir": 0,
+        "@powercab_speaker": 0
+      },
+      "snapshot3": {
+        "@name": "Chr Swl",
+        "@tempo": 120,
+        "@valid": true,
+        "blocks": {
+          "dsp1": {
+            "block0": true,
+            "block1": true,
+            "block2": true,
+            "block3": true,
+            "block4": true,
+            "block5": true,
+            "block6": true,
+            "block10": true,
+            "block7": true,
+            "block8": false,
+            "block9": true
+          },
+          "dsp0": {
+            "block0": true,
+            "block4": true,
+            "block1": true,
+            "block5": true,
+            "block2": true,
+            "block3": true
+          }
+        },
+        "@pedalstate": 2,
+        "@ledcolor": 7,
+        "controllers": {
+          "dsp1": {
+            "block0": {
+              "Index": {
+                "@fs_enabled": false,
+                "@value": 36
+              }
+            },
+            "block1": {
+              "LowGain": {
+                "@fs_enabled": false,
+                "@value": 0.60000038146972656
+              },
+              "HighGain": {
+                "@fs_enabled": false,
+                "@value": -4.3000001907348633
+              },
+              "MidGain": {
+                "@fs_enabled": false,
+                "@value": -1.3000001907348633
+              }
+            },
+            "block3": {
+              "DynAttack": {
+                "@fs_enabled": false,
+                "@value": 0.04999995231628418
+              },
+              "DynRel": {
+                "@fs_enabled": false,
+                "@value": 1.7689998149871826
+              },
+              "Feedback": {
+                "@fs_enabled": false,
+                "@value": 0.58999991416931152
+              },
+              "@trails": {
+                "@fs_enabled": false,
+                "@value": false
+              },
+              "Ducking": {
+                "@fs_enabled": false,
+                "@value": 0.38999998569488525
+              },
+              "Mix": {
+                "@fs_enabled": false,
+                "@value": 0.50999999046325684
+              }
+            },
+            "block4": {
+              "Decay": {
+                "@fs_enabled": false,
+                "@value": 23.100002288818359
+              },
+              "Mix": {
+                "@fs_enabled": false,
+                "@value": 0.35000002384185791
+              },
+              "Predelay": {
+                "@fs_enabled": false,
+                "@value": 0.013000011444091797
+              },
+              "RoomSize": {
+                "@fs_enabled": false,
+                "@value": 2
+              }
+            },
+            "block5": {
+              "Mix": {
+                "@fs_enabled": false,
+                "@value": 0.41999995708465576
+              }
+            },
+            "block6": {
+              "R Polarity": {
+                "@fs_enabled": false,
+                "@value": false
+              },
+              "Width": {
+                "@fs_enabled": false,
+                "@value": 1
+              }
+            },
+            "outputA": {
+              "pan": {
+                "@fs_enabled": false,
+                "@value": 0.49677169322967529
+              },
+              "gain": {
+                "@fs_enabled": false,
+                "@value": -0.019685685634613037
+              }
+            }
+          },
+          "dsp0": {
+            "block0": {
+              "HeelShift": {
+                "@fs_enabled": false,
+                "@value": -12
+              },
+              "Position": {
+                "@fs_enabled": false,
+                "@value": 1
+              },
+              "Mix": {
+                "@fs_enabled": false,
+                "@value": 1
+              },
+              "ToeShift": {
+                "@fs_enabled": false,
+                "@value": 0
+              }
+            },
+            "block4": {
+              "Level": {
+                "@fs_enabled": false,
+                "@value": 0.76999998092651367
+              },
+              "Tone": {
+                "@fs_enabled": false,
+                "@value": 0.26999998092651367
+              },
+              "Gain": {
+                "@fs_enabled": false,
+                "@value": 0
+              }
+            },
+            "block1": {
+              "Attack": {
+                "@fs_enabled": false,
+                "@value": 0.037999987602233887
+              },
+              "Threshold": {
+                "@fs_enabled": false,
+                "@value": -39.5
+              },
+              "Mix": {
+                "@fs_enabled": false,
+                "@value": 0.29999995231628418
+              },
+              "Level": {
+                "@fs_enabled": false,
+                "@value": 6
+              },
+              "Ratio": {
+                "@fs_enabled": false,
+                "@value": 1
+              }
+            },
+            "block5": {
+              "ChVol": {
+                "@fs_enabled": false,
+                "@value": 0.70000004768371582
+              },
+              "Bass": {
+                "@fs_enabled": false,
+                "@value": 0.47000002861022949
+              },
+              "Drive": {
+                "@fs_enabled": false,
+                "@value": 0.080000042915344238
+              },
+              "Presence": {
+                "@fs_enabled": false,
+                "@value": 0.38999998569488525
+              },
+              "Depth": {
+                "@fs_enabled": false,
+                "@value": 0.25
+              }
+            },
+            "outputA": {
+              "gain": {
+                "@fs_enabled": false,
+                "@value": 0.59999847412109375
+              }
+            },
+            "block3": {
+              "Threshold": {
+                "@fs_enabled": false,
+                "@value": -55.299999237060547
+              }
+            }
+          }
+        },
+        "@custom_name": false
+      },
+      "snapshot5": {
+        "@name": "Cr",
+        "@tempo": 120,
+        "@valid": true,
+        "blocks": {
+          "dsp1": {
+            "block0": true,
+            "block1": true,
+            "block2": false,
+            "block3": false,
+            "block4": true,
+            "block5": false,
+            "block6": true,
+            "block10": true,
+            "block7": true,
+            "block8": false,
+            "block9": true
+          },
+          "dsp0": {
+            "block0": true,
+            "block4": true,
+            "block1": true,
+            "block5": true,
+            "block2": true,
+            "block3": true
+          }
+        },
+        "@pedalstate": 2,
+        "@ledcolor": 5,
+        "controllers": {
+          "dsp1": {
+            "block0": {
+              "Index": {
+                "@fs_enabled": false,
+                "@value": 36
+              }
+            },
+            "block1": {
+              "LowGain": {
+                "@fs_enabled": false,
+                "@value": 1.6000003814697266
+              },
+              "HighGain": {
+                "@fs_enabled": false,
+                "@value": -4.9000000953674316
+              },
+              "MidGain": {
+                "@fs_enabled": false,
+                "@value": -3.1999998092651367
+              }
+            },
+            "block3": {
+              "DynAttack": {
+                "@fs_enabled": false,
+                "@value": 0.04999995231628418
+              },
+              "DynRel": {
+                "@fs_enabled": false,
+                "@value": 0.89999997615814209
+              },
+              "Feedback": {
+                "@fs_enabled": false,
+                "@value": 0.41999995708465576
+              },
+              "@trails": {
+                "@fs_enabled": false,
+                "@value": false
+              },
+              "Ducking": {
+                "@fs_enabled": false,
+                "@value": 0.27999997138977051
+              },
+              "Mix": {
+                "@fs_enabled": false,
+                "@value": 0.45000004768371582
+              }
+            },
+            "block4": {
+              "Decay": {
+                "@fs_enabled": false,
+                "@value": 0.60000002384185791
+              },
+              "Mix": {
+                "@fs_enabled": false,
+                "@value": 0.070000052452087402
+              },
+              "Predelay": {
+                "@fs_enabled": false,
+                "@value": 0
+              },
+              "RoomSize": {
+                "@fs_enabled": false,
+                "@value": 0
+              }
+            },
+            "block5": {
+              "Mix": {
+                "@fs_enabled": false,
+                "@value": 0.27999997138977051
+              }
+            },
+            "block6": {
+              "R Polarity": {
+                "@fs_enabled": false,
+                "@value": true
+              },
+              "Width": {
+                "@fs_enabled": false,
+                "@value": 1
+              }
+            },
+            "outputA": {
+              "pan": {
+                "@fs_enabled": false,
+                "@value": 0.49677169322967529
+              },
+              "gain": {
+                "@fs_enabled": false,
+                "@value": -0.019685685634613037
+              }
+            }
+          },
+          "dsp0": {
+            "block0": {
+              "HeelShift": {
+                "@fs_enabled": false,
+                "@value": -12
+              },
+              "Position": {
+                "@fs_enabled": false,
+                "@value": 1
+              },
+              "Mix": {
+                "@fs_enabled": false,
+                "@value": 1
+              },
+              "ToeShift": {
+                "@fs_enabled": false,
+                "@value": 0
+              }
+            },
+            "block4": {
+              "Level": {
+                "@fs_enabled": false,
+                "@value": 0.73000001907348633
+              },
+              "Tone": {
+                "@fs_enabled": false,
+                "@value": 0.54999995231628418
+              },
+              "Gain": {
+                "@fs_enabled": false,
+                "@value": 0.12999999523162842
+              }
+            },
+            "block1": {
+              "Attack": {
+                "@fs_enabled": false,
+                "@value": 0.037999987602233887
+              },
+              "Threshold": {
+                "@fs_enabled": false,
+                "@value": -37.099998474121094
+              },
+              "Mix": {
+                "@fs_enabled": false,
+                "@value": 0.39999997615814209
+              },
+              "Level": {
+                "@fs_enabled": false,
+                "@value": 2.5
+              },
+              "Ratio": {
+                "@fs_enabled": false,
+                "@value": 3
+              }
+            },
+            "block5": {
+              "ChVol": {
+                "@fs_enabled": false,
+                "@value": 0.72000002861022949
+              },
+              "Bass": {
+                "@fs_enabled": false,
+                "@value": 0.37000000476837158
+              },
+              "Drive": {
+                "@fs_enabled": false,
+                "@value": 0.37000000476837158
+              },
+              "Presence": {
+                "@fs_enabled": false,
+                "@value": 0.71000003814697266
+              },
+              "Depth": {
+                "@fs_enabled": false,
+                "@value": 0.13999998569488525
+              }
+            },
+            "outputA": {
+              "gain": {
+                "@fs_enabled": false,
+                "@value": 0
+              }
+            },
+            "block3": {
+              "Threshold": {
+                "@fs_enabled": false,
+                "@value": -44.900001525878906
+              }
+            }
+          }
+        },
+        "@custom_name": false
+      },
+      "snapshot7": {
+        "@name": "Swl",
+        "@tempo": 120,
+        "@valid": true,
+        "blocks": {
+          "dsp1": {
+            "block0": false,
+            "block1": true,
+            "block2": false,
+            "block3": true,
+            "block4": true,
+            "block5": true,
+            "block6": true,
+            "block10": true,
+            "block7": true,
+            "block8": false,
+            "block9": true
+          },
+          "dsp0": {
+            "block0": true,
+            "block4": false,
+            "block1": true,
+            "block5": false,
+            "block2": true,
+            "block3": true
+          }
+        },
+        "@pedalstate": 2,
+        "@ledcolor": 10,
+        "controllers": {
+          "dsp1": {
+            "block0": {
+              "Index": {
+                "@fs_enabled": false,
+                "@value": 36
+              }
+            },
+            "block1": {
+              "LowGain": {
+                "@fs_enabled": false,
+                "@value": 5.3999996185302734
+              },
+              "HighGain": {
+                "@fs_enabled": false,
+                "@value": 7.2000007629394531
+              },
+              "MidGain": {
+                "@fs_enabled": false,
+                "@value": -9.3000001907348633
+              }
+            },
+            "block3": {
+              "DynAttack": {
+                "@fs_enabled": false,
+                "@value": 0.0099999904632568359
+              },
+              "DynRel": {
+                "@fs_enabled": false,
+                "@value": 1.3949999809265137
+              },
+              "Feedback": {
+                "@fs_enabled": false,
+                "@value": 0.74000000953674316
+              },
+              "@trails": {
+                "@fs_enabled": false,
+                "@value": true
+              },
+              "Ducking": {
+                "@fs_enabled": false,
+                "@value": 0.45000004768371582
+              },
+              "Mix": {
+                "@fs_enabled": false,
+                "@value": 0.37999999523162842
+              }
+            },
+            "block4": {
+              "Decay": {
+                "@fs_enabled": false,
+                "@value": 30.80000114440918
+              },
+              "Mix": {
+                "@fs_enabled": false,
+                "@value": 0.60000002384185791
+              },
+              "Predelay": {
+                "@fs_enabled": false,
+                "@value": 0.018000006675720215
+              },
+              "RoomSize": {
+                "@fs_enabled": false,
+                "@value": 2
+              }
+            },
+            "block5": {
+              "Mix": {
+                "@fs_enabled": false,
+                "@value": 0.29999995231628418
+              }
+            },
+            "block6": {
+              "R Polarity": {
+                "@fs_enabled": false,
+                "@value": false
+              },
+              "Width": {
+                "@fs_enabled": false,
+                "@value": 1
+              }
+            },
+            "outputA": {
+              "pan": {
+                "@fs_enabled": false,
+                "@value": 0.49677169322967529
+              },
+              "gain": {
+                "@fs_enabled": false,
+                "@value": -0.019685685634613037
+              }
+            }
+          },
+          "dsp0": {
+            "block0": {
+              "HeelShift": {
+                "@fs_enabled": false,
+                "@value": -12
+              },
+              "Position": {
+                "@fs_enabled": false,
+                "@value": 1
+              },
+              "Mix": {
+                "@fs_enabled": false,
+                "@value": 1
+              },
+              "ToeShift": {
+                "@fs_enabled": false,
+                "@value": 0
+              }
+            },
+            "block4": {
+              "Level": {
+                "@fs_enabled": false,
+                "@value": 0.56999993324279785
+              },
+              "Tone": {
+                "@fs_enabled": false,
+                "@value": 0.57999992370605469
+              },
+              "Gain": {
+                "@fs_enabled": false,
+                "@value": 0.039999961853027344
+              }
+            },
+            "block1": {
+              "Attack": {
+                "@fs_enabled": false,
+                "@value": 0.00010001659393310547
+              },
+              "Threshold": {
+                "@fs_enabled": false,
+                "@value": -50.099998474121094
+              },
+              "Mix": {
+                "@fs_enabled": false,
+                "@value": 1
+              },
+              "Level": {
+                "@fs_enabled": false,
+                "@value": 12
+              },
+              "Ratio": {
+                "@fs_enabled": false,
+                "@value": 5
+              }
+            },
+            "block5": {
+              "ChVol": {
+                "@fs_enabled": false,
+                "@value": 0.75
+              },
+              "Bass": {
+                "@fs_enabled": false,
+                "@value": 0.37000000476837158
+              },
+              "Drive": {
+                "@fs_enabled": false,
+                "@value": 0.47000002861022949
+              },
+              "Presence": {
+                "@fs_enabled": false,
+                "@value": 0.85000002384185791
+              },
+              "Depth": {
+                "@fs_enabled": false,
+                "@value": 0.13999998569488525
+              }
+            },
+            "outputA": {
+              "gain": {
+                "@fs_enabled": false,
+                "@value": 12.399993896484375
+              }
+            },
+            "block3": {
+              "Threshold": {
+                "@fs_enabled": false,
+                "@value": -40.5
+              }
+            }
+          }
+        },
+        "@custom_name": false
+      }
+    },
+    "device_version": 51707904
+  },
+  "meta": {
+    "original": 0,
+    "pbn": 0,
+    "premium": 0
+  },
+  "schema": "L6Preset",
+  "version": 6
+}

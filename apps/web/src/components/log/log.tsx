@@ -23,7 +23,7 @@ export const Log = ({ logs, onClear }: LogProps) => {
         </thead>
         <tbody>
           {logs.map((log) => (
-            <tr className={styles.log}>
+            <tr className={styles.log} key={log.date.toString()}>
               <td className={styles.status} data-status={log.status}>
                 {log.status}
               </td>

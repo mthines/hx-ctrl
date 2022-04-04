@@ -7,8 +7,10 @@
   padding: 2vw 20px;
 
   .submit {
-    margin-top: 10px;
     display: block;
+    margin: 20px auto;
+    padding: 15px 25px;
+    font-size: var(--fz-16);
   }
 
   .form {
@@ -53,4 +55,11 @@
       }
     }
   }
+}
+
+.message {
+  padding: 20px;
+  background-color: var(--c-grey-30);
+  margin-top: var(--s-2);
+  border-radius: var(--brs-10);
 }

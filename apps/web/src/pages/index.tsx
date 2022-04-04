@@ -13,6 +13,7 @@ import axios, { AxiosError, AxiosResponse } from 'axios';
 import { GeneratePluginBody, GeneratePluginError, GeneratePluginResponse } from 'apps/web/src/pages/api/v1/generate_plugin';
 import { useState } from 'react';
 import { Log, LogProps } from 'apps/web/src/components/log/log';
+import { ReactNode } from 'react';
 
 export type Inputs = {
   outputDir?: string | undefined;
@@ -35,7 +36,7 @@ export function Index() {
   const [formState, setFormState] = useRecoilState(formAtom);
   const [logs, setLogs] = useRecoilState(presetLog);
   const [formInitialized, setFormInitialized] = useState(false);
-  const form = useForm<Inputs>();
+  const form = useForm<Inputs>({ defaultValues: { filePath: '', outputDir: '' } });
   const values = form.watch();
   const { outputDir, filePath } = values;
 
@@ -69,12 +70,12 @@ export function Index() {
   };
 
   useEffect(() => {
-    console.log('#72', formState, values, formInitialized);
-    if (!isEmpty(values) || formState.form === null || formInitialized) {
+    if (formState.form === null || formInitialized) {
       return;
     }
+    console.log('#75', formState.form, values);
 
-    if (!isEmpty(formState) && isEmpty(values)) {
+    if (!isEmpty(formState.form) && !values.filePath && !values.outputDir) {
       form.reset(formState.form);
     }
 
@@ -82,7 +83,7 @@ export function Index() {
   }, [values, formState]);
 
   useEffect(() => {
-    if (isEmpty(values)) {
+    if (formState.form === null || isEmpty(values)) {
       return;
     }
 
@@ -165,16 +166,24 @@ export function Index() {
         </Button>
 
         {isSuccess && (
-          <p>
-            Success, file <strong>{data?.outputFile}</strong> created at <strong>{data?.outputPath}</strong>
-          </p>
+          <Message
+            message={
+              <>
+                Success, file <strong>{data?.outputFile}</strong> created at <strong>{data?.outputPath}</strong>
+              </>
+            }
+          />
         )}
 
         {isError && (
-          <div>
-            <h4>Something went wrong</h4>
-            {error?.message && <p>{error.message}</p>}
-          </div>
+          <Message
+            message={
+              <>
+                <h4>Something went wrong</h4>
+                {error?.message && <p>{error.message}</p>}
+              </>
+            }
+          />
         )}
       </form>
 
@@ -188,3 +197,7 @@ export function Index() {
 }
 
 export default Index;
+
+const Message = ({ message }: { message: ReactNode }) => {
+  return <p className={styles.message}>{message}</p>;
+};

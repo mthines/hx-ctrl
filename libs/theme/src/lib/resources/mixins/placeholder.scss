@@ -1,0 +1,26 @@
+/// Use for the placeholder inside of an input field
+/// @group Placeholder
+/// @example scss - SCSS Input
+/// .selector {
+///   @include placeholder {
+///     color: red;
+///   }
+/// }
+///
+@mixin placeholder {
+  &::-webkit-input-placeholder {
+    @content;
+  }
+
+  &:-moz-placeholder {
+    @content;
+  }
+
+  &::-moz-placeholder {
+    @content;
+  }
+
+  &:-ms-input-placeholder {
+    @content;
+  }
+}

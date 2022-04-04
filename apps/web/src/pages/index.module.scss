@@ -1,6 +1,56 @@
-.page {
+@use 'libs/theme' as *;
+
+.main {
+  min-height: 100vh;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2vw 20px;
+
   .submit {
     margin-top: 10px;
     display: block;
+  }
+
+  .form {
+    background-color: var(--c-grey-10);
+    box-shadow: var(--bsh-big-soft);
+    padding: 30px 50px;
+  }
+
+  .fields {
+    display: flex;
+    flex-flow: column nowrap;
+    width: 100%;
+    column-gap: var(--s-2);
+    row-gap: var(--s-4);
+
+    > * {
+      flex: 1;
+    }
+  }
+
+  .field {
+    position: relative;
+
+    input {
+      width: 100%;
+      padding-right: 80px;
+    }
+
+    .fileUpload {
+      font-size: var(--fz-12);
+      text-transform: uppercase;
+      padding: 5px;
+      background-color: var(--c-grey-40);
+      border-radius: var(--brs-5);
+      position: absolute;
+      right: 10px;
+      top: 31px;
+      cursor: pointer;
+
+      input[type='file'] {
+        @include visuallyHidden;
+      }
+    }
   }
 }

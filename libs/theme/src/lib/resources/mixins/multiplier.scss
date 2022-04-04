@@ -1,0 +1,39 @@
+@use 'sass:string';
+@use '../functions' as *;
+
+/// Mulitplies the selector to make it stronger. Use instead of !important;
+/// @param {number} $quantity [1] The amout of times, we should add an extra class
+/// @group Utilities
+/// @example scss - SCSS Input
+/// .selector {
+///   @include multiplier {
+///     ...css,
+///   }
+/// }
+///
+
+@mixin multiplier($quantity: 1) {
+  $selectorGroups: str-split('#{&}', ',');
+
+  @each $selectorGroup in $selectorGroups {
+    $selectors: str-split('#{$selectorGroup}', ' ');
+    $lastIndex: length($selectors);
+    $lastSelector: nth($selectors, $lastIndex);
+
+    $selectorType: string.slice($lastSelector, 0, 1);
+
+    @if ($selectorType == '.' or $selectorType == '#') {
+      $selector: &;
+
+      @for $quantity from 1 through $quantity {
+        $selector: selector_append($selector, $lastSelector);
+      }
+
+      @at-root #{$selector} {
+        @content;
+      }
+    } @else {
+      @warn 'The last selector in the group is not a class or id selector. It will be ignored.';
+    }
+  }
+}

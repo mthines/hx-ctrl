@@ -1,0 +1,14 @@
+@use '~/../libs/theme/src/lib/global' as *;
+
+html,
+body,
+#__next {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+body {
+  background: linear-gradient(152deg, var(--c-grey-10) 0%, var(--c-grey-turquioise) 100%);
+  color: var(--c-white);
+}

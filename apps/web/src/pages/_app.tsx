@@ -2,7 +2,8 @@ import { AppProps } from 'next/app';
 import Head from 'next/head';
 import { QueryClient, QueryClientProvider } from 'react-query';
 import { RecoilRoot } from 'recoil';
-import './styles.css';
+
+import './global.scss';
 
 const queryClient = new QueryClient();
 
@@ -14,9 +15,7 @@ function CustomApp({ Component, pageProps }: AppProps) {
       </Head>
       <RecoilRoot>
         <QueryClientProvider client={queryClient}>
-          <main className="app">
-            <Component {...pageProps} />
-          </main>
+          <Component {...pageProps} />
         </QueryClientProvider>
       </RecoilRoot>
     </>

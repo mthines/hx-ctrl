@@ -19,7 +19,8 @@
       "@hx-ctrl/plugin-generator": ["libs/plugin-generator/src/index.ts"],
       "@hx-ctrl/recoil-persist": ["libs/recoil-persist/src/index.ts"],
       "@hx-ctrl/theme": ["libs/theme/src/index.ts"],
-      "@hx-ctrl/utils/common": ["libs/utils/common/src/index.ts"]
+      "@hx-ctrl/utils/common": ["libs/utils/common/src/index.ts"],
+      "@project_name/asd": ["libs/ui/test/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

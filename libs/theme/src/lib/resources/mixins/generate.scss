@@ -1,0 +1,36 @@
+@use '../variables.scss' as *;
+@use '../functions' as *;
+
+//
+// Generate Color variables
+//
+// This is useful for generating schemes and other color variables
+// @example scss
+// @include generate-color(white, grey, 15);
+// @include generate-color({ $color: black, $name: grey, $whiten: true });
+@mixin generate-color($color, $name: 'color', $steps: 10, $whiten: true) {
+	@if ($color == null) {
+		@warn 'You need to add a color';
+	}
+
+	@for $i from 1 through $steps {
+		$key: (100 / $steps) * $i;
+		@if ($whiten == true) {
+			--#{$name}-#{$key}: #{whiten($color, ($i - 1) * (100 / $steps))};
+		} @else {
+			--#{$name}-#{$key}: #{blacken($color, ($i - 1) * (100 / $steps))};
+		}
+	}
+}
+
+//
+// Generate CSS variables
+//
+// This is useful for outputting CSS Variables generating
+// @example scss
+// @include generate-variables;
+@mixin generate-variables {
+	@each $key, $v in $variables {
+		#{$key}: #{get($variables, $key)};
+	}
+}

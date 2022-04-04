@@ -1,0 +1,75 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: var(--ff-display);
+	font-weight: var(--fw-bold);
+
+	&:first-child {
+		margin-top: 0;
+	}
+}
+
+h6 {
+	font-size: var(--fz-16);
+}
+
+h5 {
+	font-size: var(--fz-20);
+}
+
+h4 {
+	font-size: var(--fz-24);
+}
+
+h3 {
+	font-size: var(--fz-30);
+}
+
+h2 {
+	font-size: var(--fz-32);
+}
+
+h1 {
+	font-size: var(--fz-38);
+}
+
+$blockParagraphs: (h1, h2, h3, h4, h5, h6, p);
+
+@each $typo in $blockParagraphs {
+	#{$typo} {
+		@each $otherTypo in $blockParagraphs {
+			@if ($otherTypo != 'p') {
+				+ #{$otherTypo} {
+					margin-top: var(--s-2);
+				}
+			}
+		}
+
+		+ #{$typo} {
+			margin-top: var(--s-2);
+		}
+
+		&:empty {
+			margin: 0;
+		}
+	}
+}
+
+a {
+	display: inline-block;
+	margin-inline-end: 3px;
+	margin-inline-start: 3px;
+	color: var(--c-link);
+}
+
+strong,
+bold {
+	font-weight: var(--fw-bold);
+}
+
+code {
+  font-family: monospace;
+}

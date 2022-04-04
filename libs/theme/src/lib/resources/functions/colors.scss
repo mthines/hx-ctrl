@@ -1,0 +1,20 @@
+/// Check whether a specific color is Light / Dark
+/// @param {color} $coloe The Color
+/// @group Checks
+/// @example scss
+/// isLight(black)
+///
+
+@function isLight($color) {
+	@return lightness($color) > 50%;
+}
+
+// Add percentage of white to a color
+@function whiten($color, $percent) {
+	@return mix(white, $color, $percent);
+}
+
+// Add percentage of black to a color
+@function blacken($color, $percent) {
+	@return mix(black, $color, $percent);
+}

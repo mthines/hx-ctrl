@@ -24,6 +24,18 @@
         ]
       }
     },
+    "generate_variables": {
+      "executor": "@nrwl/workspace:run-script",
+      "options": {
+        "script": "generate:variables"
+      },
+      "outputs": ["libs/theme/src/generated"],
+      "configurations": {
+        "dev": {
+          "script": "generate:variables:dev"
+        }
+      }
+    },
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "outputs": ["{options.outputFile}"],

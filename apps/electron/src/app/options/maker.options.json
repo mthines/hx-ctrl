@@ -1,3 +1,10 @@
 {
-  "$schema": "../../../../../node_modules/nx-electron/src/validation/maker.schema.json"
+  "$schema": "../../../../../node_modules/nx-electron/src/validation/maker.schema.json",
+  "productName": "HX Ctrl",
+  "copyright": "Copyright © 2022 Mads Thines Coello",
+  "appx": {
+    "displayName": "HX Ctrl",
+    "publisherDisplayName": "Mads Thines Coello",
+    "backgroundColor": "transparent"
+  }
 }

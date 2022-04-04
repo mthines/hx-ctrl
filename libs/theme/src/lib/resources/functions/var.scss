@@ -1,0 +1,5 @@
+/// CSS Variable - Negative
+/// Multiplies the value by -1 which returns the same number but negative
+@function -var($variable) {
+	@return calc(var(#{$variable}) * -1);
+}

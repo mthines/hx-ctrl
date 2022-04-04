@@ -5,7 +5,7 @@
   "tags": [],
   "targets": {
     "build": {
-      "executor": "@nrwl/web:rollup",
+      "executor": "@nrwl/web:package",
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/libs/ui/form",
@@ -14,7 +14,6 @@
         "entryFile": "libs/ui/form/src/index.ts",
         "external": ["react/jsx-runtime"],
         "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
-        "compiler": "babel",
         "assets": [
           {
             "glob": "libs/ui/form/README.md",

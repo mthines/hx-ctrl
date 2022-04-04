@@ -35,16 +35,18 @@
     "package": {
       "executor": "nx-electron:package",
       "options": {
-        "name": "hx-ctrl",
+        "name": "web",
         "outputPath": "dist/packages",
-        "prepackageOnly": true
+        "prepackageOnly": true,
+        "frontendProject": "app"
       }
     },
     "make": {
       "executor": "nx-electron:make",
       "options": {
-        "name": "hx-ctrl",
-        "outputPath": "dist/executables"
+        "name": "web",
+        "outputPath": "dist/executables",
+        "frontendProject": "app"
       }
     },
     "lint": {
@@ -62,5 +64,6 @@
         "passWithNoTests": true
       }
     }
-  }
+  },
+  "implicitDependencies": ["web"]
 }

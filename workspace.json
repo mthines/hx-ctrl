@@ -9,5 +9,22 @@
     "utils/common": "libs/utils/common",
     "web": "apps/web",
     "web-e2e": "apps/web-e2e"
+  },
+  "cli": {
+    "defaultCollection": "@nrwl/next"
+  },
+  "defaultProject": "web",
+  "generators": {
+    "@nrwl/react": {
+      "application": {
+        "babel": true
+      }
+    },
+    "@nrwl/next": {
+      "application": {
+        "style": "scss",
+        "linter": "eslint"
+      }
+    }
   }
 }

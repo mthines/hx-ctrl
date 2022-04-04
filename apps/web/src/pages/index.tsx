@@ -2,17 +2,17 @@ import styles from './index.module.scss';
 
 import { InputText } from '@ht-ctrl/ui-form';
 import { isEmpty } from 'lodash';
-import { useForm, SubmitHandler } from 'react-hook-form';
+import { useForm, SubmitHandler, Controller } from 'react-hook-form';
 import { Button } from 'apps/web/src/components/button/button';
 import { atom, useRecoilState } from 'recoil';
 import { persistAtomEffect } from '@hx-ctrl/recoil-persist';
 import { useEffect } from 'react';
-import { Param0 } from 'type-zoo';
+import { OmitStrict, Param0 } from 'type-zoo';
 import { useMutation } from 'react-query';
 import axios, { AxiosError, AxiosResponse } from 'axios';
 import { GeneratePluginBody, GeneratePluginError, GeneratePluginResponse } from 'apps/web/src/pages/api/v1/generate_plugin';
 import { useState } from 'react';
-import { Log } from 'apps/web/src/components/log/log';
+import { Log, LogProps } from 'apps/web/src/components/log/log';
 
 export type Inputs = {
   outputDir?: string | undefined;
@@ -25,7 +25,7 @@ const formAtom = atom<{ form: Inputs | null }>({
   effects_UNSTABLE: [persistAtomEffect],
 });
 
-const presetLog = atom<({ status: 'error' | 'success' } & Inputs)[]>({
+const presetLog = atom<LogProps['logs']>({
   default: [],
   key: 'submitLog',
   effects_UNSTABLE: [persistAtomEffect],
@@ -37,8 +37,8 @@ export function Index() {
   const [formInitialized, setFormInitialized] = useState(false);
   const form = useForm<Inputs>();
   const values = form.watch();
-
   const { outputDir, filePath } = values;
+
   const { mutateAsync, isLoading, isError, data, isSuccess, error } = useMutation<GeneratePluginResponse, GeneratePluginError>({
     mutationKey: filePath,
     mutationFn: async () => {
@@ -56,10 +56,10 @@ export function Index() {
       }
     },
     onError: () => {
-      setLogs((prev) => [...prev, { status: 'error', ...values }]);
+      setLogs((prev) => [...prev, { status: 'error', date: new Date(), ...values }]);
     },
     onSuccess: () => {
-      setLogs((prev) => [...prev, { status: 'success', ...values }]);
+      setLogs((prev) => [...prev, { status: 'success', date: new Date(), ...values }]);
     },
     useErrorBoundary: false,
   });
@@ -69,14 +69,16 @@ export function Index() {
   };
 
   useEffect(() => {
+    console.log('#72', formState, values, formInitialized);
     if (!isEmpty(values) || formState.form === null || formInitialized) {
       return;
     }
 
     if (!isEmpty(formState) && isEmpty(values)) {
       form.reset(formState.form);
-      setFormInitialized(true);
     }
+
+    setFormInitialized(true);
   }, [values, formState]);
 
   useEffect(() => {
@@ -114,13 +116,49 @@ export function Index() {
   };
 
   return (
-    <div className={styles.page}>
-      <form onSubmit={form.handleSubmit(onSubmit)}>
-        <InputText id="input_path" label="Preset" type="file" onChange={handleInput} />
-        {filePath && <div>Selected preset {filePath}</div>}
+    <main className={styles.main}>
+      <h1>HX Ctrl</h1>
+      <h5>
+        Select your Helix <code>*.hlx</code>{' '}
+      </h5>
 
-        <InputText id="output" label="Output directory" directory="" webkitdirectory="" type="file" onChange={handleOutput} />
-        {outputDir && <div>Selected output path is {outputDir}</div>}
+      <form onSubmit={form.handleSubmit(onSubmit)} className={styles.form}>
+        <div className={styles.fields}>
+          <div className={styles.field}>
+            <Controller
+              control={form.control}
+              name="filePath"
+              render={({ field }) => (
+                <InputText label="Preset" placeholder="The preset you want to process" id="filePath" {...field} />
+              )}
+            />
+
+            <label className={styles.fileUpload}>
+              Select
+              <input type="file" onChange={handleInput} />
+            </label>
+          </div>
+
+          <div className={styles.field}>
+            <Controller
+              control={form.control}
+              name="outputDir"
+              render={({ field }) => (
+                <InputText
+                  label="Output directory"
+                  placeholder="Path to the `REAPER/Effects/midi` directory"
+                  id="outputDir"
+                  {...field}
+                />
+              )}
+            />
+
+            <label className={styles.fileUpload}>
+              Select
+              <input {...{ directory: '', webkitdirectory: '' }} type="file" onChange={handleOutput} />
+            </label>
+          </div>
+        </div>
 
         <Button type="submit" className={styles.submit}>
           {isLoading ? 'Loading...' : 'Generate'}
@@ -145,7 +183,7 @@ export function Index() {
           <Log logs={logs} onClear={() => setLogs([])} />
         </>
       )}
-    </div>
+    </main>
   );
 }
 

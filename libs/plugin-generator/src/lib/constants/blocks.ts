@@ -1,4 +1,4 @@
-import { Block } from 'libs/hx-loader/src/lib/types/helix';
+import { Block } from '@hx-ctrl/plugin-generator';
 
 export const blocknames: Record<Block['@model'], string> = {
   HD2_AppDSPFlowOutput: 'Output',

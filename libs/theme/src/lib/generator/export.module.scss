@@ -1,0 +1,5 @@
+@use '../resources' as *;
+
+:export {
+	@include generate-variables;
+}

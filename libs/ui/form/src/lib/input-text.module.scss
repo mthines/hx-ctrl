@@ -1,9 +1,19 @@
+@use 'libs/theme' as *;
+
 .input {
-  border: 1px solid rgb(176, 176, 176);
-  padding: 5px 10px;
+  padding: 10px 15px;
   display: inline-block;
   border-radius: 5px;
   font-size: 16px;
+  background-color: var(--c-grey-20);
+  border-radius: var(--brs-5);
+  border: 1px solid var(--c-grey-20);
+  min-width: 350px;
+  color: var(--c-white);
+
+  @include placeholder {
+    color: var(--c-grey-60);
+  }
 }
 
 .label {

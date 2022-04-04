@@ -1,0 +1,15 @@
+/// If you want to visually hide an element, while remain their focus states.
+/// @group Accessibility
+/// @example scss - SCSS Input
+/// .selector {
+///   @include visuallyHidden;
+/// }
+///
+@mixin visuallyHidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	overflow: hidden;
+	word-wrap: normal;
+	clip: rect(1px, 1px, 1px, 1px);
+}

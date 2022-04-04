@@ -1,0 +1,9 @@
+@function get($map, $key) {
+	$value: map-get($map, $key);
+
+	@if ($value == null) {
+		@error "#{$key}" doesnt exist in $map;
+	}
+
+	@return $value;
+}

@@ -57,10 +57,10 @@ export function Index() {
       }
     },
     onError: () => {
-      setLogs((prev) => [...prev, { status: 'error', date: new Date(), ...values }]);
+      setLogs((prev) => [{ status: 'error', date: new Date(), ...values }, ...prev]);
     },
     onSuccess: () => {
-      setLogs((prev) => [...prev, { status: 'success', date: new Date(), ...values }]);
+      setLogs((prev) => [{ status: 'success', date: new Date(), ...values }, ...prev]);
     },
     useErrorBoundary: false,
   });

@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/mthines/hx-ctrl/compare/v1.0.0...v1.1.0) (2022-04-06)
+
+
+### Features
+
+* **loader:** added support for bypass cc messages ([e3c7e22](https://github.com/mthines/hx-ctrl/commit/e3c7e22bfc3f3a4e226cf17922ebae1055365620))
+* **log:** changed log order ([c8ff2b9](https://github.com/mthines/hx-ctrl/commit/c8ff2b9761b044d51de51367ca22b3865c7797da))
+
 ## [1.0.0](https://github.com/mthines/hx-ctrl/compare/v0.0.1...v1.0.0) (2022-04-04)
 
 ### 0.0.1 (2022-04-04)

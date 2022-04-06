@@ -1,4 +1,13 @@
-import { Config, generatePlugin, getArg, Preset, Slider, SLIDER_DEFAULTS, ToneBlockTypes } from '@hx-ctrl/plugin-generator';
+import {
+  CCControl,
+  Config,
+  generatePlugin,
+  getArg,
+  Preset,
+  Slider,
+  SLIDER_DEFAULTS,
+  ToneBlockTypes,
+} from '@hx-ctrl/plugin-generator';
 import * as fs from 'fs';
 import { blocknames } from 'libs/plugin-generator/src/lib/constants/blocks';
 
@@ -21,8 +30,9 @@ export const getSliderFromPreset = async ({
     const {
       data: { meta, tone },
     } = parsed;
-    const { controller } = tone;
-    const dsps = Object.entries(controller);
+    const { controller, footswitch } = tone;
+    const controllers = Object.entries(controller);
+    const toneDsps = Object.entries({ dsp0: tone.dsp0, dsp1: tone.dsp1 });
 
     const config: Config = {
       // desc: `HX Ctrl - ${meta.name} (${dayjs().format('HH:mm:ss DD/MM/YYYY')})`,
@@ -33,21 +43,22 @@ export const getSliderFromPreset = async ({
 
     const slidersRecord: Record<string, Slider> = {};
 
-    dsps.forEach(([dspName, dsp]) => {
+    controllers.forEach(([dspName, dsp]) => {
       const toneBlocks = tone?.[dspName as keyof typeof tone] as ToneBlockTypes;
       const blocks = Object.entries(dsp);
 
       blocks.forEach(([blockName, block]) => {
         const properties = Object.entries(block);
-
         const toneBlock = toneBlocks?.[blockName];
+        const modelName = (toneBlock['@model'] && blocknames[toneBlock['@model']]) || toneBlock['@model'];
+
         properties.forEach(([propertyName, property]) => {
+          const title = `${propertyName} (${modelName}${toneBlock['@stereo'] ? ' ⚭' : ''})`;
+
           if (!property['@cc']) return;
 
-          const isSwitch = property['@max'] === true || property['@max'] === false;
-
-          const modelName = (toneBlock['@model'] && blocknames[toneBlock['@model']]) || toneBlock['@model'];
-          const title = `${propertyName} (${modelName}${toneBlock['@stereo'] ? ' ⚭' : ''})`;
+          const isSwitch =
+            property['@max'] === true || property['@max'] === false || property['@max'] === 1 || property['@max'] === 0;
 
           if (isSwitch) {
             slidersRecord[property['@cc']] = {
@@ -68,6 +79,37 @@ export const getSliderFromPreset = async ({
             default: 0,
           };
         });
+      });
+    });
+
+    let footswitches: Record<string, Partial<CCControl>> = {};
+    Object.entries(footswitch).forEach(([_, dsp]) => {
+      const blocks = Object.entries(dsp);
+      blocks.forEach(([blockName, block]) => {
+        if (!block['@cc']) return;
+        footswitches = {
+          ...footswitches,
+          [blockName]: block,
+        };
+      });
+    }, {});
+
+    toneDsps.forEach(([_, dsp]) => {
+      const blocks = Object.entries(dsp);
+
+      blocks.forEach(([blockName, block]) => {
+        const footswitchBlock = footswitches[blockName];
+        if (footswitchBlock && footswitchBlock['@cc']) {
+          const modelName = (block['@model'] && blocknames[block['@model'] as string]) || block['@model'];
+          slidersRecord[footswitchBlock['@cc']] = {
+            cc: footswitchBlock['@cc'],
+            title: `${modelName} Bypass`,
+            max: 1,
+            min: 0,
+            default: 0,
+          };
+          delete footswitches[blockName];
+        }
       });
     });
 

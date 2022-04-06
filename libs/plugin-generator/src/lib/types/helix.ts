@@ -48,6 +48,7 @@ export type DataMeta = {
 
 export type Tone = {
   controller: Controller;
+  footswitch: Footswitch;
   dsp0: Dsp;
   dsp1: Dsp;
 };
@@ -57,7 +58,12 @@ export type Controller = {
   dsp1?: Dsp;
 };
 
-export type Dsp = Partial<Record<BlockKeys | OtherKeys, BlockTypes>>;
+export type Footswitch = {
+  dsp0?: Dsp<Partial<CCControl>>;
+  dsp1?: Dsp<Partial<CCControl>>;
+};
+
+export type Dsp<T = BlockTypes & ToneBlockTypes> = Partial<Record<BlockKeys | OtherKeys, T>>;
 
 export type BlockTypes = Record<string, Partial<CCControl>>;
 

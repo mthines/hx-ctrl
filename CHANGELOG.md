@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.2.0](https://github.com/mthines/hx-ctrl/compare/v1.1.0...v1.2.0) (2022-04-07)
+
+
+### Features
+
+* **log:** added rerun ([a16335b](https://github.com/mthines/hx-ctrl/commit/a16335b472e120b29334ea298bf30bd2ce636da0))
+
+
+### Bug Fixes
+
+* **loader:** not taking the right file name ([11209ee](https://github.com/mthines/hx-ctrl/commit/11209eec46332d2ddc74d5c63ba99210adf0ec37))
+
 ## [1.1.0](https://github.com/mthines/hx-ctrl/compare/v1.0.0...v1.1.0) (2022-04-06)
 
 

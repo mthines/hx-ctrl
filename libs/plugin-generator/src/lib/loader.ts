@@ -24,7 +24,7 @@ export const getSliderFromPreset = async ({
   sliders: Slider[];
 } | void> => {
   try {
-    const fileName = '02_03_22-CC.hlx';
+    const fileName = filePath.split('/').splice(-1, 1)?.[0];
     const preset = fs.readFileSync(filePath, { encoding: 'utf-8' });
     const parsed = JSON.parse(preset) as Preset;
     const {
@@ -115,14 +115,18 @@ export const getSliderFromPreset = async ({
 
     const collectedSlides: typeof slidersRecord = {
       ...slidersRecord,
-      10: {
-        ...slidersRecord[10],
-        default: 102,
-      },
-      11: {
-        ...slidersRecord[11],
-        default: 63,
-      },
+      ...(slidersRecord[10] && {
+        10: {
+          ...slidersRecord[10],
+          default: 102,
+        },
+      }),
+      ...(slidersRecord[11] && {
+        11: {
+          ...slidersRecord[11],
+          default: 63,
+        },
+      }),
     };
 
     const slidersValues = Object.values(collectedSlides);

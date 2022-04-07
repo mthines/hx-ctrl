@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [1.2.1](https://github.com/mthines/hx-ctrl/compare/v1.2.0...v1.2.1) (2022-04-07)
+
+
+### Bug Fixes
+
+* **constants/blocks:** typo ([69f54f7](https://github.com/mthines/hx-ctrl/commit/69f54f7226a00d096e4ca41b0091152fb28cb44b))
+* **loader:** correct switch condition logic ([0790743](https://github.com/mthines/hx-ctrl/commit/07907435239809d1182542dc85b79c0986dafaa5))
+
 ## [1.2.0](https://github.com/mthines/hx-ctrl/compare/v1.1.0...v1.2.0) (2022-04-07)
 
 

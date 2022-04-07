@@ -40,14 +40,18 @@ export function Index() {
   const values = form.watch();
   const { outputDir, filePath } = values;
 
-  const { mutateAsync, isLoading, isError, data, isSuccess, error } = useMutation<GeneratePluginResponse, GeneratePluginError>({
+  const { mutateAsync, isLoading, isError, data, isSuccess, error } = useMutation<
+    GeneratePluginResponse,
+    GeneratePluginError,
+    Inputs
+  >({
     mutationKey: filePath,
-    mutationFn: async () => {
+    mutationFn: async (inputs) => {
       try {
         return (
           await axios.post<GeneratePluginResponse, AxiosResponse<GeneratePluginResponse>, GeneratePluginBody>(
             '/api/v1/generate_plugin',
-            { filePath: filePath, outputDir: outputDir },
+            { filePath: inputs.filePath, outputDir: inputs.outputDir },
           )
         )?.data;
       } catch (err) {
@@ -66,14 +70,18 @@ export function Index() {
   });
 
   const onSubmit: SubmitHandler<Inputs> = () => {
-    mutateAsync();
+    mutateAsync({ filePath, outputDir });
+  };
+
+  const handleRerun: SubmitHandler<Inputs> = async (inputs: Inputs) => {
+    mutateAsync(inputs);
+    form.reset(inputs, { keepTouched: true });
   };
 
   useEffect(() => {
     if (formState.form === null || formInitialized) {
       return;
     }
-    console.log('#75', formState.form, values);
 
     if (!isEmpty(formState.form) && !values.filePath && !values.outputDir) {
       form.reset(formState.form);
@@ -189,7 +197,7 @@ export function Index() {
 
       {!isEmpty(logs) && (
         <>
-          <Log logs={logs} onClear={() => setLogs([])} />
+          <Log logs={logs} onClear={() => setLogs([])} handleRerun={handleRerun} />
         </>
       )}
     </main>

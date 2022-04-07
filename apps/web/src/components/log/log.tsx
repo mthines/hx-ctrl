@@ -5,9 +5,13 @@ import React from 'react';
 
 import styles from './log.module.scss';
 
-export type LogProps = { logs: ({ status: 'error' | 'success'; date: Date } & Inputs)[]; onClear?: () => void };
+export type LogProps = {
+  logs: ({ status: 'error' | 'success'; date: Date } & Inputs)[];
+  onClear?: () => void;
+  handleRerun: (inputs: Inputs) => void;
+};
 
-export const Log = ({ logs, onClear }: LogProps) => {
+export const Log = ({ logs, onClear, handleRerun }: LogProps) => {
   return (
     <section className={styles.logs}>
       <h5 className={styles.title}>Log</h5>
@@ -30,6 +34,11 @@ export const Log = ({ logs, onClear }: LogProps) => {
               <td className={styles.date}>{dayjs(log.date).format('HH:mm:ss - DD/MM/YYYY')}</td>
               <td className={styles.filePath}>{log.filePath}</td>
               <td className={styles.outputDir}>{log.outputDir}</td>
+              <td className={styles.outputDir}>
+                <Button className={styles.rerun} onClick={() => handleRerun(log)}>
+                  Rerun
+                </Button>
+              </td>
             </tr>
           ))}
         </tbody>

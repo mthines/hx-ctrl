@@ -1,3 +1,6 @@
+import * as fs from 'fs';
+import { blocknames } from 'libs/plugin-generator/src/lib/constants/blocks';
+
 import {
   CCControl,
   Config,
@@ -8,8 +11,6 @@ import {
   SLIDER_DEFAULTS,
   ToneBlockTypes,
 } from '@hx-ctrl/plugin-generator';
-import * as fs from 'fs';
-import { blocknames } from 'libs/plugin-generator/src/lib/constants/blocks';
 
 export type GetSliderFromPresetParam = {
   filePath: string;
@@ -57,8 +58,7 @@ export const getSliderFromPreset = async ({
 
           if (!property['@cc']) return;
 
-          const isSwitch =
-            property['@max'] === true || property['@max'] === false || property['@max'] === 1 || property['@max'] === 0;
+          const isSwitch = property['@max'] === true || property['@max'] === false;
 
           if (isSwitch) {
             slidersRecord[property['@cc']] = {

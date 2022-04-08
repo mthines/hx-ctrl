@@ -38,7 +38,7 @@
         "name": "web",
         "outputPath": "dist/packages",
         "prepackageOnly": true,
-        "frontendProject": "app"
+        "frontendProject": "web"
       }
     },
     "make": {
@@ -46,7 +46,7 @@
       "options": {
         "name": "web",
         "outputPath": "dist/executables",
-        "frontendProject": "app"
+        "frontendProject": "web"
       }
     },
     "lint": {

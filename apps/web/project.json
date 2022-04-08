@@ -12,7 +12,9 @@
         "outputPath": "dist/apps/web"
       },
       "configurations": {
-        "production": {}
+        "production": {
+          "baseHref": "./"
+        }
       }
     },
     "serve": {

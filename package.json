@@ -1,5 +1,6 @@
 {
   "name": "hx-ctrl",
+  "description": "A DAW Midi Controller for the Line 6 Helix (jsfx)",
   "version": "1.2.1",
   "license": "MIT",
   "scripts": {
@@ -68,5 +69,10 @@
     "standard-version": "^9.3.2",
     "ts-jest": "27.0.5",
     "typescript": "~4.5.2"
+  },
+  "author": {
+    "name": "Mads Thines Coello",
+    "email": "madsthines@gmail.com",
+    "url": "https://github.com/mthines"
   }
 }

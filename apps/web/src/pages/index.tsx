@@ -1,19 +1,24 @@
-import styles from './index.module.scss';
-
+import { yupResolver } from '@hookform/resolvers/yup';
 import { InputText } from '@ht-ctrl/ui-form';
-import { isEmpty } from 'lodash';
-import { useForm, SubmitHandler, Controller } from 'react-hook-form';
-import { Button } from 'apps/web/src/components/button/button';
-import { atom, useRecoilState } from 'recoil';
-import { persistAtomEffect } from '@hx-ctrl/recoil-persist';
-import { useEffect } from 'react';
-import { OmitStrict, Param0 } from 'type-zoo';
-import { useMutation } from 'react-query';
 import axios, { AxiosError, AxiosResponse } from 'axios';
-import { GeneratePluginBody, GeneratePluginError, GeneratePluginResponse } from 'apps/web/src/pages/api/v1/generate_plugin';
+import { isEmpty } from 'lodash';
+import { useEffect } from 'react';
 import { useState } from 'react';
-import { Log, LogProps } from 'apps/web/src/components/log/log';
 import { ReactNode } from 'react';
+import { Controller, SubmitHandler, useForm } from 'react-hook-form';
+import { useMutation } from 'react-query';
+import { atom, useRecoilState } from 'recoil';
+import { Param0 } from 'type-zoo';
+import * as yup from 'yup';
+
+import { persistAtomEffect } from '@hx-ctrl/recoil-persist';
+
+import { Button } from 'apps/web/src/components/button/button';
+import { Log, LogProps } from 'apps/web/src/components/log/log';
+
+import { GeneratePluginBody, GeneratePluginError, GeneratePluginResponse } from 'apps/web/src/pages/api/v1/generate_plugin';
+
+import styles from './index.module.scss';
 
 export type Inputs = {
   outputDir?: string | undefined;
@@ -31,14 +36,22 @@ const presetLog = atom<LogProps['logs']>({
   key: 'submitLog',
   effects_UNSTABLE: [persistAtomEffect],
 });
+const schema = yup
+  .object()
+  .shape({
+    filePath: yup.string().required(),
+    outputDir: yup.number().required(),
+  })
+  .required();
 
 export function Index() {
   const [formState, setFormState] = useRecoilState(formAtom);
   const [logs, setLogs] = useRecoilState(presetLog);
   const [formInitialized, setFormInitialized] = useState(false);
-  const form = useForm<Inputs>({ defaultValues: { filePath: '', outputDir: '' } });
+  const form = useForm<Inputs>({ defaultValues: { filePath: '', outputDir: '' }, resolver: yupResolver(schema) });
   const values = form.watch();
   const { outputDir, filePath } = values;
+  console.log('#54', values);
 
   const { mutateAsync, isLoading, isError, data, isSuccess, error } = useMutation<
     GeneratePluginResponse,
@@ -126,11 +139,6 @@ export function Index() {
 
   return (
     <main className={styles.main}>
-      <h1>HX Ctrl</h1>
-      <h5>
-        Select your Helix <code>*.hlx</code>{' '}
-      </h5>
-
       <form onSubmit={form.handleSubmit(onSubmit)} className={styles.form}>
         <div className={styles.fields}>
           <div className={styles.field}>
@@ -138,7 +146,7 @@ export function Index() {
               control={form.control}
               name="filePath"
               render={({ field }) => (
-                <InputText label="Preset" placeholder="The preset you want to process" id="filePath" {...field} />
+                <InputText label="*.hlx preset" placeholder="The preset you want to process" id="filePath" {...field} />
               )}
             />
 
@@ -154,7 +162,7 @@ export function Index() {
               name="outputDir"
               render={({ field }) => (
                 <InputText
-                  label="Output directory"
+                  label="Reaper output directory"
                   placeholder="Path to the `REAPER/Effects/midi` directory"
                   id="outputDir"
                   {...field}
@@ -187,7 +195,7 @@ export function Index() {
           <Message
             message={
               <>
-                <h4>Something went wrong</h4>
+                <h6>Something went wrong</h6>
                 {error?.message && <p>{error.message}</p>}
               </>
             }

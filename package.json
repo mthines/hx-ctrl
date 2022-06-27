@@ -17,6 +17,7 @@
     "libs/**/*"
   ],
   "dependencies": {
+    "@nrwl/next": "12.10.1",
     "core-js": "^3.6.5",
     "next": "12.1.0",
     "react": "17.0.2",
@@ -54,6 +55,8 @@
     "eslint": "~8.7.0",
     "eslint-config-next": "12.1.1-canary.3",
     "eslint-config-prettier": "8.1.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "eslint-plugin-unused-imports": "^2.0.0",
     "eslint-plugin-cypress": "^2.10.3",
     "eslint-plugin-import": "2.25.4",
     "eslint-plugin-jsx-a11y": "6.5.1",

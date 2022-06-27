@@ -1,7 +1,6 @@
 {
   "version": 2,
   "projects": {
-    "electron": "apps/electron",
     "plugin-generator": "libs/plugin-generator",
     "recoil-persist": "libs/recoil-persist",
     "theme": "libs/theme",

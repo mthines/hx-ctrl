@@ -4,26 +4,6 @@
   "projectType": "library",
   "tags": [],
   "targets": {
-    "build": {
-      "executor": "@nrwl/web:rollup",
-      "outputs": ["{options.outputPath}"],
-      "options": {
-        "outputPath": "dist/libs/theme",
-        "tsConfig": "libs/theme/tsconfig.lib.json",
-        "project": "libs/theme/package.json",
-        "entryFile": "libs/theme/src/index.ts",
-        "external": ["react/jsx-runtime"],
-        "rollupConfig": "@nrwl/react/plugins/bundle-rollup",
-        "compiler": "babel",
-        "assets": [
-          {
-            "glob": "libs/theme/README.md",
-            "input": ".",
-            "output": "."
-          }
-        ]
-      }
-    },
     "generate_variables": {
       "executor": "@nrwl/workspace:run-script",
       "options": {

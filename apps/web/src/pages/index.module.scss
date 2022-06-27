@@ -5,6 +5,10 @@
   max-width: 900px;
   margin: 0 auto;
   padding: 2vw 20px;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
 
   .submit {
     display: block;
@@ -17,6 +21,7 @@
     background-color: var(--c-grey-10);
     box-shadow: var(--bsh-big-soft);
     padding: 30px 50px;
+    width: clamp(400px, 50vw, 700px);
   }
 
   .fields {
@@ -37,6 +42,10 @@
     input {
       width: 100%;
       padding-right: 80px;
+    }
+
+    label {
+      font-size: var(--fz-14);
     }
 
     .fileUpload {
@@ -60,6 +69,6 @@
 .message {
   padding: 20px;
   background-color: var(--c-grey-30);
-  margin-top: var(--s-2);
+  margin-bottom: var(--s-5);
   border-radius: var(--brs-10);
 }

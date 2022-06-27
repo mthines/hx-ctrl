@@ -3,41 +3,68 @@
   "ignorePatterns": ["**/*"],
   "plugins": ["@nrwl/nx", "simple-import-sort", "unused-imports"],
   "rules": {
-    "no-tabs": "off",
-    "indent": ["warn"],
-    "import/order": "off",
-    "consistent-return": "off",
-    "no-use-before-define": "off",
-    "import/extensions": "off",
+    "@nrwl/nx/enforce-module-boundaries": [
+      "error",
+      {
+        "allow": ["@apps", "@web", "@studio", "@project_name/library"],
+        "depConstraints": [
+          {
+            "onlyDependOnLibsWithTags": ["*"],
+            "sourceTag": "*"
+          }
+        ],
+        "enforceBuildableLibDependency": true
+      }
+    ],
+    "function-paren-newline": "off",
+    "global-require": "error",
+    "implicit-arrow-linebreak": "off",
+    "import/no-extraneous-dependencies": ["off"],
     "import/prefer-default-export": "off",
-    "import/no-unresolved": "off",
-    "no-extra-boolean-cast": "off",
+    "no-tabs": "off",
+    "no-empty-pattern": "off",
+    "no-mixed-spaces-and-tabs": "off",
+    "no-promise-executor-return": "off",
     "object-curly-newline": "off",
-    "max-len": "off",
-    "no-unused-vars": ["error", { "argsIgnorePattern": "^_", "destructuredArrayIgnorePattern": "^_" }],
-    "no-console": ["warn", { "allow": ["warn", "error"] }],
+    "operator-linebreak": "off",
+    "comma-dangle": ["error", "always-multiline"],
+    "max-len": [
+      "error",
+      {
+        "code": 140,
+        "ignoreComments": true,
+        "ignoreStrings": true,
+        "ignoreTemplateLiterals": true,
+        "ignoreRegExpLiterals": true
+      }
+    ],
     "simple-import-sort/imports": [
       "warn",
       {
         "groups": [
           ["^((?!((.*).(scss|css))))"],
           ["^(@hx-ctrl/)"],
-          ["^(@apps/.+/components|components/)"],
-          ["^(@apps/.+/constants|constants/)"],
-          ["^(@apps/.+/config|config/)"],
-          ["^(@apps/.+/lib|lib/)"],
-          ["^(@apps/.+/pages|pages/)"],
-          ["^(@apps/.+/state|state/)"],
-          ["^(@apps/.+/styles|styles/)"],
-          ["^(@apps/.+/translations|translations/)"],
-          ["^(@apps/.+/types|types/)"],
-          ["^(@apps/.+/utils|utils/)"],
-          ["^(@apps/.+/assets|assets/|(.*).(scss|css)$)"],
-          ["^((./|../))"]
+          ["^(apps/.+/assets|assets/)"],
+          ["^(apps/.+/blocks|templates/)"],
+          ["^(apps/.+/components|components/)"],
+          ["^(apps/.+/config|config/)"],
+          ["^(apps/.+/constants|constants/)"],
+          ["^(apps/.+/layouts|layouts/)"],
+          ["^(apps/.+/lib|lib/)"],
+          ["^(apps/.+/pages|pages/)"],
+          ["^(apps/.+/services|services/)"],
+          ["^(apps/.+/state|state/)"],
+          ["^(apps/.+/styles|styles/)"],
+          ["^(apps/.+/templates|templates/)"],
+          ["^(apps/.+/translations|translations/)"],
+          ["^(apps/.+/types|types/)"],
+          ["^(apps/.+/utils|utils/)"],
+          ["^(apps/.+/(.*).(scss|css)$)"],
+          ["^((./|../))"],
+          ["^((./|../)(.*).(scss|css)$)"]
         ]
       }
     ],
-    "import/no-extraneous-dependencies": ["off"],
     "unused-imports/no-unused-imports": ["error"],
     "unused-imports/no-unused-vars": [
       "warn",

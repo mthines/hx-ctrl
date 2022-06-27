@@ -1,11 +1,11 @@
 {
-  "root": "libs/theme",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/theme/src",
   "projectType": "library",
   "tags": [],
   "targets": {
     "generate_variables": {
-      "executor": "@nrwl/workspace:run-script",
+      "executor": "nx:run-script",
       "options": {
         "script": "generate:variables"
       },
@@ -27,7 +27,7 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/libs/theme"],
       "options": {
-        "jestConfig": "libs/theme/jest.config.js",
+        "jestConfig": "libs/theme/jest.config.ts",
         "passWithNoTests": true
       }
     }

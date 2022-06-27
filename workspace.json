@@ -1,6 +1,7 @@
 {
   "version": 2,
   "projects": {
+    "hx-ctrl": "apps/hx-ctrl",
     "plugin-generator": "libs/plugin-generator",
     "recoil-persist": "libs/recoil-persist",
     "theme": "libs/theme",
@@ -9,21 +10,5 @@
     "web": "apps/web",
     "web-e2e": "apps/web-e2e"
   },
-  "cli": {
-    "defaultCollection": "@nrwl/next"
-  },
-  "defaultProject": "web",
-  "generators": {
-    "@nrwl/react": {
-      "application": {
-        "babel": true
-      }
-    },
-    "@nrwl/next": {
-      "application": {
-        "style": "scss",
-        "linter": "eslint"
-      }
-    }
-  }
+  "$schema": "./node_modules/nx/schemas/workspace-schema.json"
 }

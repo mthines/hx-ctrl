@@ -1,5 +1,5 @@
 {
-  "root": "apps/web",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "apps/web",
   "projectType": "application",
   "targets": {
@@ -14,21 +14,28 @@
       "configurations": {
         "production": {
           "baseHref": "./"
-        }
+        },
+        "development": {}
       }
     },
     "serve": {
       "executor": "@nrwl/next:server",
       "options": {
         "buildTarget": "web:build",
-        "dev": true
+        "dev": true,
+        "proxyConfig": "apps/web/proxy.conf.json"
       },
       "configurations": {
         "production": {
           "buildTarget": "web:build:production",
           "dev": false
+        },
+        "development": {
+          "buildTarget": "web:build:development",
+          "dev": true
         }
-      }
+      },
+      "defaultConfiguration": "development"
     },
     "export": {
       "executor": "@nrwl/next:export",
@@ -40,7 +47,7 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/apps/web"],
       "options": {
-        "jestConfig": "apps/web/jest.config.js",
+        "jestConfig": "apps/web/jest.config.ts",
         "passWithNoTests": true
       }
     },

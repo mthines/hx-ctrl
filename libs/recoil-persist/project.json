@@ -1,5 +1,5 @@
 {
-  "root": "libs/recoil-persist",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/recoil-persist/src",
   "projectType": "library",
   "tags": [],
@@ -15,7 +15,7 @@
       "executor": "@nrwl/jest:jest",
       "outputs": ["coverage/libs/recoil-persist"],
       "options": {
-        "jestConfig": "libs/recoil-persist/jest.config.js",
+        "jestConfig": "libs/recoil-persist/jest.config.ts",
         "passWithNoTests": true
       }
     }

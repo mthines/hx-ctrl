@@ -18,6 +18,15 @@
 .settings/
 *.sublime-workspace
 
+# yarn v2
+.yarn/*
+# !.yarn/cache # Uncomment for zero-install
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+.pnp.* # Comment for zero-install
+
 # IDE - VSCode
 .vscode/*
 !.vscode/settings.json

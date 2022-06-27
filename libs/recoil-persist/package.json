@@ -4,8 +4,8 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
+    "@hx-ctrl/utils-common": "1.0.0",
     "localforage": "^1.10.0",
-    "recoil": "^0.7.0",
-    "@hx-ctrl/utils-common": "1.0.0"
+    "recoil": "^0.7.0"
   }
 }

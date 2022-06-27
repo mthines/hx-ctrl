@@ -40,7 +40,7 @@ const schema = yup
   .object()
   .shape({
     filePath: yup.string().required(),
-    outputDir: yup.number().required(),
+    outputDir: yup.string().required(),
   })
   .required();
 
@@ -51,7 +51,6 @@ export function Index() {
   const form = useForm<Inputs>({ defaultValues: { filePath: '', outputDir: '' }, resolver: yupResolver(schema) });
   const values = form.watch();
   const { outputDir, filePath } = values;
-  console.log('#54', values);
 
   const { mutateAsync, isLoading, isError, data, isSuccess, error } = useMutation<
     GeneratePluginResponse,
